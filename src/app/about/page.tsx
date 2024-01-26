@@ -1,12 +1,11 @@
+import personal from '@/assets/images/about/manirmp.jpg';
 import { Link } from '@/components/atoms/link';
 import { Section } from '@/components/atoms/section';
 import { SocialLinks } from '@/components/molecules/social-links';
-import { Activity } from '@/components/ui/about/activity';
 import { Experience } from '@/components/ui/about/experience';
 import { Skills } from '@/components/ui/about/skills';
 import { getColoredTextClasses } from '@/utils/colored-text';
 import { createMetadata } from '@/utils/metadata';
-
 import Photo from './photo';
 
 const jsonLd = JSON.stringify({
@@ -17,13 +16,13 @@ const jsonLd = JSON.stringify({
   mainEntity: {
     '@id': '#main-author',
     '@type': 'Person',
-    name: 'Jahir Fiquitiva',
-    alternateName: ['jahirfiquitiva', 'jahirdotdev'],
+    name: 'ManiRmp',
+    alternateName: ['Manirmp', 'Manirmpdev'],
     description:
       'Passionate and creative full-stack software engineer from Colombia 🇨🇴',
-    image: 'https://jahir.dev/media/jahir/jahir-hd.jpg',
+    image: personal,
     sameAs: [
-      'https://github.com/jahirfiquitiva',
+      'https://github.com/ManiRamezanpour',
       'https://linkedin.com/in/jahirfiquitiva',
       'https://twitter.com/jahirfiquitiva',
       'https://instagram.com/jahirfiquitiva',
@@ -49,20 +48,19 @@ export default function AboutPage() {
           <span role={'img'} aria-label={'waving hand'}>
             👋
           </span>{' '}
-          Hey there! I&apos;m Jahir Fiquitiva, a full-stack software engineer
-          from{' '}
+          Hey there! I&apos;m Mani Ramezanpour, Junior full-stack software
+          engineer from{' '}
           <Link
-            title={'Colombia'}
-            href={'https://www.google.com/maps/place/Colombia/@4,-72z/'}
+            title={'Iran'}
+            href={'https://www.google.com/maps/place/Iran/'}
             data-umami-event={'Link to Colombia map'}
           >
-            Colombia{' '}
-            <span role={'img'} aria-label={'Colombia flag'}>
-              🇨🇴
+            Iran{' '}
+            <span role={'img'} aria-label={'Iran flag'}>
+              🇮🇷
             </span>
           </Link>{' '}
-          with over five (5) years of professional experience. My pronouns are
-          he/they.
+          with over two (2) years of experience. My pronouns are he/they.
         </p>
         <p className={'max-w-nice'}>
           I focus on details and I&apos;m passionate about crafting software
@@ -72,7 +70,7 @@ export default function AboutPage() {
         <p className={'max-w-nice'}>
           I&apos;m a huge advocate for open source and collaborating with the
           community. You can find my stash of websites, libraries, and apps on{' '}
-          <Link title={'GitHub'} href={'https://github.com/jahirfiquitiva'}>
+          <Link title={'GitHub'} href={'https://github.com/ManiRamezanpour'}>
             GitHub
           </Link>{' '}
           which have earned over 2K stars.
@@ -82,23 +80,12 @@ export default function AboutPage() {
           skillset and I thrive in globally-remote teams that value people and
           embrace trust, kindness, and inclusion.
         </p>
-        <p className={'max-w-nice'}>
-          If you&apos;re curious about the hardware and software tools I use
-          every day, feel free to check out the{' '}
-          <Link title={'Uses page'} href={'/uses'}>
-            uses
-          </Link>{' '}
-          page.
-        </p>
       </Section>
       <Section id={'contact'} className={'-mt-5 gap-2.5'}>
         <h2 className={'text-sm mb-2'}>Let&apos;s connect!</h2>
         <p>
           Feel free to reach out to me at{' '}
-          <Link
-            title={'Email'}
-            href={'mailto:hola@jahir.dev?subject=Hi%20Jahir!'}
-          >
+          <Link title={'Email'} href={'mailto:maniramznpoor2007@gmail.com'}>
             hola@jahir.dev
           </Link>
           , or find me on social media:
@@ -107,7 +94,6 @@ export default function AboutPage() {
       </Section>
       <Skills />
       <Experience />
-      <Activity />
       <script type={'application/ld+json'} suppressHydrationWarning>
         {jsonLd}
       </script>
@@ -116,8 +102,8 @@ export default function AboutPage() {
 }
 
 export const metadata = createMetadata({
-  title: 'About – Jahir Fiquitiva',
-  description: 'Learn more about me (Jahir Fiquitiva), my career and more',
+  title: 'About – Maniramezanpour',
+  description: 'Learn more about me (Maniramezanpour), my career and more',
   exactUrl: 'https://jahir.dev/about',
   keywords: ['bio', 'biography', 'information', 'about', 'career'],
 });

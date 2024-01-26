@@ -1,6 +1,6 @@
 import bpsmart from '@/assets/images/experience/bpsmart.jpeg';
+import minis from '@/assets/images/experience/minis.webp';
 import msco from '@/assets/images/experience/msco.jpeg';
-import nwyc from '@/assets/images/experience/nwyc.jpeg';
 import servex from '@/assets/images/experience/servex.jpeg';
 import { Icon } from '@/components/atoms/icon';
 import { LinkButton } from '@/components/atoms/link-button';
@@ -14,11 +14,12 @@ import {
 
 const experience: Array<ExperienceRecord> = [
   {
-    company: 'National Write Your Congressman, Inc.',
-    position: 'Frontend Engineer',
+    company: 'Minis studio',
+    position: 'Game developer',
     from: 'Mar 2023',
-    link: 'https://www.nwyc.com/',
-    image: nwyc,
+    until: 'Nov 2023',
+    link: 'https://www.minis.dev/',
+    image: minis,
     color: '#2E4C94',
   },
   {

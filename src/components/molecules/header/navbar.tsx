@@ -25,21 +25,6 @@ const toolbarLinksList = [
     href: '/about',
     className: buildColoredLinkClasses('blue', 'green'),
   },
-  {
-    title: 'Blog',
-    href: '/blog',
-    className: buildColoredLinkClasses('yellow', 'orange'),
-  },
-  {
-    title: 'Projects',
-    href: '/projects',
-    className: buildColoredLinkClasses('red', 'purple'),
-  },
-  {
-    title: 'Uses',
-    href: '/uses',
-    className: buildColoredLinkClasses('brand', 'blue'),
-  },
 ];
 
 interface NavbarProps extends TWComponentProps<typeof Nav> {
@@ -53,7 +38,7 @@ export const Navbar = (props: NavbarProps) => {
   return (
     <Nav id={'navigation'} className={className}>
       <NavLink
-        title={'Jahir Fiquitiva - Home Page'}
+        title={'Manirmp - Home Page'}
         href={'/'}
         className={'gap-2 hocus:bg-toolbar-highlight'}
         aria-current={props.path === '/' ? 'page' : undefined}
@@ -68,7 +53,7 @@ export const Navbar = (props: NavbarProps) => {
             true,
           )}
         >
-          Jahir Fiquitiva
+          ManiRmp
         </span>
       </NavLink>
       <LinksList>

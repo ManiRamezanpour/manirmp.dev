@@ -43,7 +43,7 @@ export const Intro = () => {
           </p>
           <SubHeader>
             <span>
-              I am <Name>Jahir Fiquitiva</Name>
+              I am <Name>Mani Ramezanpour</Name>
             </span>
             <Verified />
           </SubHeader>
@@ -57,10 +57,8 @@ export const Intro = () => {
               href={'https://www.google.com/maps/place/Colombia/@4,-72z/'}
               data-umami-event={'Link to Colombia map'}
             >
-              Colombia{' '}
-              <span role={'img'} aria-label={'Colombia flag'}>
-                🇨🇴
-              </span>
+              Mazandran,Iran{' '}
+              <span role={'img'} aria-label={'Colombia flag'}></span>
             </Link>
           </span>
           <span className={'max-w-[48ch]'}>

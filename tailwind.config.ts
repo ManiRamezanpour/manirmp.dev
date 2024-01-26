@@ -1,10 +1,10 @@
 import type { Config } from 'tailwindcss';
+import hocus from 'tailwindcss-hocus';
 import twColors from 'tailwindcss/colors';
 import { fontFamily, spacing } from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
-import hocus from 'tailwindcss-hocus';
 
-import { THEME_COLOR_LIGHT, THEME_COLOR_DARK } from './src/utils/color';
+import { THEME_COLOR_DARK, THEME_COLOR_LIGHT } from './src/utils/color';
 
 const reduceObjArray = <T>(objs: Array<T>) =>
   objs.reduce((r, c) => Object.assign(r, c), {});
@@ -100,17 +100,17 @@ module.exports = {
       },
       colors: {
         brand: {
-          950: '#060A15',
-          900: '#0B152B',
-          800: '#162956',
-          700: '#223E80',
-          600: '#2D52AB',
-          500: '#3867D6',
-          400: '#6085DE',
-          300: '#88A4E6',
-          200: '#AFC2EF',
-          100: '#D7E1F7',
-          50: '#EBF0FB',
+          950: '#083344',
+          900: '#164e63',
+          800: '#155e75',
+          700: '#0e7490',
+          600: '#0891b2',
+          500: '#06b6d4',
+          400: '#22d3ee',
+          300: '#67e8f9',
+          200: '#a5f3fc',
+          100: '#cffafe',
+          50: '#ecfeff',
         },
         light: THEME_COLOR_LIGHT,
         dark: THEME_COLOR_DARK,

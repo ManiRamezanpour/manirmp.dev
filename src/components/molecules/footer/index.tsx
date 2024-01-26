@@ -22,7 +22,7 @@ export const Footer = () => {
     <StyledFooter>
       <Details>
         <FooterLink
-          title={'Jahir Fiquitiva - Home Page'}
+          title={'Mani Ramezanpour - Home Page'}
           href={'/'}
           className={cx(
             'self-start',
@@ -42,13 +42,13 @@ export const Footer = () => {
               true,
             )}
           >
-            Jahir Fiquitiva
+            Mani Ramezanpour
           </span>
         </FooterLink>
         <Description>
-          Passionate and creative full-stack software engineer from Colombia{' '}
+          Passionate and creative full-stack software engineer from Iran{' '}
           <span role={'img'} aria-label={'Colombia flag'}>
-            🇨🇴
+            🇮🇷
           </span>
         </Description>
         <SocialLinks />

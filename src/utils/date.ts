@@ -29,7 +29,7 @@ export const formatDate = (
     const date = getDate(baseDate);
     if (!date) return '';
     return new Intl.DateTimeFormat('en-US', {
-      timeZone: 'America/Bogota',
+      timeZone: 'Asia/Tehran',
       ...(asTime ? timeFormattingOptions : dateFormattingOptions),
       ...options,
     }).format(date);

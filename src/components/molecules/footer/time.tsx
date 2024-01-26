@@ -47,7 +47,7 @@ export const Clock = () => {
       }
     >
       <Icon className={'size-5'} path={getIconPath(timeText)} />
-      <span className={'tabular-nums'}>{timeText} COL.</span>
+      <span className={'tabular-nums'}>{timeText} Tehran.</span>
     </p>
   );
 };

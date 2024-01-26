@@ -1,10 +1,8 @@
+import personal from '@/assets/images/about/manirmp.jpg';
 import { Img } from '@/components/atoms/img';
 import cx from '@/utils/cx';
 
-import { getAboutImage } from './images';
-
 export default async function Photo() {
-  const photo = await getAboutImage();
   return (
     <figure className={'mt-3'}>
       <div
@@ -16,15 +14,15 @@ export default async function Photo() {
         )}
       >
         <Img
-          src={photo.src}
-          alt={photo.alt}
+          src={personal}
+          alt={'coding ...'}
           quality={100}
           placeholder={'blur'}
           className={'h-full'}
           priority
         />
       </div>
-      <figcaption>{photo.alt}</figcaption>
+      <figcaption>coding ...</figcaption>
     </figure>
   );
 }

@@ -15,21 +15,6 @@ export const linksGroups = [
         href: '/about',
         className: buildColoredLinkClasses('blue', 'green', true),
       },
-      {
-        title: 'Blog',
-        href: '/blog',
-        className: buildColoredLinkClasses('yellow', 'orange', true),
-      },
-      {
-        title: 'Projects',
-        href: '/projects',
-        className: buildColoredLinkClasses('red', 'purple', true),
-      },
-      {
-        title: 'Uses',
-        href: '/uses',
-        className: buildColoredLinkClasses('brand', 'blue', true),
-      },
     ],
   },
   {
