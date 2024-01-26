@@ -1,12 +1,4 @@
-# [jahir.dev](https://jahir.dev)
-
-[![GitHub Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=ff69b4)](https://github.com/sponsors/jahirfiquitiva)
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./preview-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./preview.png">
-  <img alt="Website preview" src="./preview.png">
-</picture>
+# [manirmp.dev](https://manirmp-dev.vercel.app/)
 
 ## Stack
 
