@@ -6,6 +6,7 @@ import { Experience } from '@/components/ui/about/experience';
 import { Skills } from '@/components/ui/about/skills';
 import { getColoredTextClasses } from '@/utils/colored-text';
 import { createMetadata } from '@/utils/metadata';
+
 import Photo from './photo';
 
 const jsonLd = JSON.stringify({

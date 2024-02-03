@@ -1,12 +1,13 @@
 import { Fragment } from 'react';
 
-import monaGifFile from '@/assets/images/donate/pixel-mona-heart.gif';
 import { Section } from '@/components/atoms/section';
 import { getColoredTextClasses } from '@/utils/colored-text';
 
 import { SponsorItem } from '../sponsor';
 
 import { Header, MonaGif, StyledList } from './sponsors-list.styles';
+
+import monaGifFile from '@/assets/images/donate/pixel-mona-heart.gif';
 
 export interface SponsorsListProps {
   categories: Array<SponsorsCategory>;

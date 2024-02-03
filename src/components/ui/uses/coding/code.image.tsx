@@ -1,8 +1,9 @@
-import darkCode from '@/assets/images/code/code-dark.png';
-import lightCode from '@/assets/images/code/code-light.png';
 import type { ImgProps } from '@/components/atoms/img';
 import { Img } from '@/components/atoms/img';
 import cx, { tw } from '@/utils/cx';
+
+import darkCode from '@/assets/images/code/code-dark.png';
+import lightCode from '@/assets/images/code/code-light.png';
 
 const CodeImg = tw(Img)<ImgProps>`
   h-full w-full
