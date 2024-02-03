@@ -2,7 +2,6 @@
 import photo from '@/assets/images/photo.jpg';
 import { Icon } from '@/components/atoms/icon';
 import { Img } from '@/components/atoms/img';
-import { Link } from '@/components/atoms/link';
 import { LinkButton } from '@/components/atoms/link-button';
 import { Section } from '@/components/atoms/section';
 import { SocialLinks } from '@/components/molecules/social-links';
@@ -51,19 +50,8 @@ export const Intro = () => {
 
         <p className={'text-pretty flex flex-col gap-2 text-sm'}>
           <span className={'max-w-[42ch]'}>
-            Passionate and creative full-stack software engineer from{' '}
-            <Link
-              title={'Colombia'}
-              href={'https://www.google.com/maps/place/Colombia/@4,-72z/'}
-              data-umami-event={'Link to Colombia map'}
-            >
-              Mazandran,Iran{' '}
-              <span role={'img'} aria-label={'Colombia flag'}></span>
-            </Link>
-          </span>
-          <span className={'max-w-[48ch]'}>
-            Detail-driven, I strive to build great-looking, user-friendly
-            software while enhancing my skills along the way
+            A full-stack JS/TS Developer with 3 years of hands-on experience in
+            creating high-performance web applications.
           </span>
         </p>
       </div>

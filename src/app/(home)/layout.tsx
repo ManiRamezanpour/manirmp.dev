@@ -5,10 +5,8 @@ import { Intro } from '@/components/ui/home';
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  image: 'https://jahir.dev/media/jahir/jahir-hd.jpg',
-  url: 'https://jahir.dev',
-  sameAs: ['https://jahir.dev/about'],
-  logo: 'https://jahir.dev/media/brand/logo-full.png',
+  url: 'https://manirmp.dev',
+  sameAs: ['https://manirmp.dev/about'],
   name: 'Manirmp',
   description: 'Passionate and creative full-stack software engineer from Iran',
   email: 'maniramznpoor2007@gmail.com',

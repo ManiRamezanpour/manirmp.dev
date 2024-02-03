@@ -37,7 +37,7 @@ const defaultNextConfig = {
       { hostname: 'images.unsplash.com' },
       { hostname: 'i.scdn.co' },
       { hostname: 'spotify.com' },
-      { hostname: 'jahir.dev' },
+      { hostname: 'manirmp.dev' },
       { hostname: 'unavatar.io' },
       { hostname: 'source.boringavatars.com' },
       { hostname: 'lh3.googleusercontent.com' },
