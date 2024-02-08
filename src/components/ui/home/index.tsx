@@ -7,6 +7,7 @@ import { Section } from '@/components/atoms/section';
 import { SocialLinks } from '@/components/molecules/social-links';
 import cx from '@/utils/cx';
 
+import { Skills } from '../about/skills';
 import { Name, SubHeader, WavingSpan } from './intro.styles';
 import { Verified } from './verified';
 import { WavingHello } from './waving-hello';
@@ -82,6 +83,7 @@ export const Intro = () => {
         </LinkButton>
         <SocialLinks />
       </div>
+      <Skills />
     </Section>
   );
 };

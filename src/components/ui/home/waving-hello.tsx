@@ -9,6 +9,7 @@ const greetings = [
   'Hallo, Welt',
   'Bonjour, monde',
   'Olá, mundo',
+  'سلام دنیا',
 ];
 
 export const WavingHello = () => {

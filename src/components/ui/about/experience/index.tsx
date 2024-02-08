@@ -1,7 +1,5 @@
-import bpsmart from '@/assets/images/experience/bpsmart.jpeg';
+import bremen from '@/assets/images/experience/bremen-logo-light.png';
 import minis from '@/assets/images/experience/minis.webp';
-import msco from '@/assets/images/experience/msco.jpeg';
-import servex from '@/assets/images/experience/servex.jpeg';
 import { Icon } from '@/components/atoms/icon';
 import { LinkButton } from '@/components/atoms/link-button';
 import { Section } from '@/components/atoms/section';
@@ -14,41 +12,49 @@ import {
 
 const experience: Array<ExperienceRecord> = [
   {
+    company: 'Ga-beremen',
+    position: 'Full-stack developer',
+    from: 'Oct 2023',
+    until: 'present',
+    link: 'https://gab.8thsense.de/home/',
+    image: bremen,
+    color: '#4C4C59',
+  },
+  {
+    company: 'Royan Ict',
+    position: 'Software developer intern',
+    from: 'Sep 2023',
+    until: 'Oct 2023',
+    link: '',
+    image: '',
+    color: '#2E4C94',
+  },
+  {
     company: 'Minis studio',
     position: 'Game developer',
     from: 'Mar 2023',
-    until: 'Nov 2023',
+    until: 'Jul 2023',
     link: 'https://www.minis.dev/',
     image: minis,
     color: '#2E4C94',
   },
   {
-    company: 'Matter Supply Co.',
-    position: 'Software Engineer',
-    from: 'Sep 2020',
-    until: 'Nov 2022',
-    link: 'https://mattersupply.co/',
-    image: msco,
-    color: '#4C4C59',
+    company: 'Freelancer',
+    position: 'Freelancer',
+    from: 'Jul 2022',
+    until: 'Feb 2023',
+    link: '',
+    image: '',
+    color: '#2E4C94',
   },
   {
-    company: 'BPSmart',
-    position: 'Technical Development Lead',
-    from: 'Jan 2020',
-    until: 'Aug 2020',
-    link: 'https://www.bpsmart.ai/',
-    image: bpsmart,
-    color: '#8FD554',
-  },
-  {
-    company: 'Servex',
-    position: 'Full Stack Developer',
-    from: 'Sep 2018',
-    until: 'Dec 2019',
-    link: 'https://www.servex.com.pe/',
-    image: servex,
-    color: '#4AA1D1',
-    last: true,
+    company: 'Niknet',
+    position: 'Front-end developer intern',
+    from: 'May 2022',
+    until: 'Jun 2022',
+    link: '',
+    image: '',
+    color: '#2E4C94',
   },
 ];
 

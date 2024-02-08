@@ -4,8 +4,6 @@ import { Logo } from '@/components/atoms/logo';
 import { getColoredTextClasses } from '@/utils/colored-text';
 import cx from '@/utils/cx';
 
-import { SocialLinks } from '../social-links';
-
 import { BackToTopLink } from './back-to-top-link';
 import { linksGroups } from './footer.data';
 import {
@@ -51,7 +49,7 @@ export const Footer = () => {
             🇮🇷
           </span>
         </Description>
-        <SocialLinks />
+        {/* <SocialLinks /> */}
       </Details>
       {linksGroups.map((group) => {
         return (

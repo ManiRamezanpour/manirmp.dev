@@ -3,7 +3,6 @@ import { Link } from '@/components/atoms/link';
 import { Section } from '@/components/atoms/section';
 import { SocialLinks } from '@/components/molecules/social-links';
 import { Experience } from '@/components/ui/about/experience';
-import { Skills } from '@/components/ui/about/skills';
 import { getColoredTextClasses } from '@/utils/colored-text';
 import { createMetadata } from '@/utils/metadata';
 
@@ -97,7 +96,6 @@ export default function AboutPage() {
         </p>
         <SocialLinks />
       </Section>
-      <Skills />
       <Experience />
       <script type={'application/ld+json'} suppressHydrationWarning>
         {jsonLd}
