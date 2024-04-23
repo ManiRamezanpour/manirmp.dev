@@ -10,7 +10,7 @@ import { skills } from './data';
 
 export const Skills = () => {
   return (
-    <Section id={'skills'}>
+    <Section id={'skills'} className={'gap-2'}>
       <h2
         className={getColoredTextClasses(
           'green',
@@ -21,7 +21,7 @@ export const Skills = () => {
       >
         Skills
       </h2>
-      <ul className={'flex items-center gap-2.5 flex-wrap'}>
+      <ul className={'flex gap-2.5 flex-wrap shrink'}>
         {skills
           .filter((skill) => !skill.hide)
           .map((skill) => {

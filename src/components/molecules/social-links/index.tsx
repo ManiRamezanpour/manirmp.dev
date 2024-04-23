@@ -40,7 +40,7 @@ export const SocialLinks = (props: ComponentProps<'ul'>) => {
         <SocialLink
           title={'𝕏 (formerly Twitter)'}
           aria-label={'𝕏 (formerly Twitter)'}
-          href={'https://twitter.com/jahirfiquitiva'}
+          href={'https://twitter.com/Manirmps'}
           className={cx(
             'leading-none',
             'hocus:text-[#1471a9] hocus:dark:text-[#1da1f2] hocus:bg-[#e8f6fe] dark:hocus:bg-[#093049]',

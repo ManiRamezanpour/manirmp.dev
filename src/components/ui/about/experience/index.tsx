@@ -1,5 +1,7 @@
-import bremen from '@/assets/images/experience/bremen-logo-light.png';
+import sence from '@/assets/images/experience/3ae87c29.png';
+import mehrotech from '@/assets/images/experience/logo-white.png';
 import minis from '@/assets/images/experience/minis.webp';
+import aval from '@/assets/images/experience/photo_1403-01-03 09.45.33.jpeg';
 import { Icon } from '@/components/atoms/icon';
 import { LinkButton } from '@/components/atoms/link-button';
 import { Section } from '@/components/atoms/section';
@@ -12,22 +14,13 @@ import {
 
 const experience: Array<ExperienceRecord> = [
   {
-    company: 'Ga-beremen',
+    company: '8thsence',
     position: 'Full-stack developer',
     from: 'Oct 2023',
     until: 'present',
     link: 'https://gab.8thsense.de/home/',
-    image: bremen,
+    image: sence,
     color: '#4C4C59',
-  },
-  {
-    company: 'Royan Ict',
-    position: 'Software developer intern',
-    from: 'Sep 2023',
-    until: 'Oct 2023',
-    link: '',
-    image: '',
-    color: '#2E4C94',
   },
   {
     company: 'Minis studio',
@@ -38,13 +31,22 @@ const experience: Array<ExperienceRecord> = [
     image: minis,
     color: '#2E4C94',
   },
+  // {
+  //   company: 'Royan Ict',
+  //   position: 'Software developer intern',
+  //   from: 'Sep 2023',
+  //   until: 'Oct 2023',
+  //   link: '',
+  //   image: '',
+  //   color: '#2E4C94',
+  // },
   {
-    company: 'Freelancer',
-    position: 'Freelancer',
+    company: 'Aval-co',
+    position: 'software developer',
     from: 'Jul 2022',
     until: 'Feb 2023',
-    link: '',
-    image: '',
+    link: 'https://aval-co.de',
+    image: aval,
     color: '#2E4C94',
   },
   {
@@ -52,8 +54,8 @@ const experience: Array<ExperienceRecord> = [
     position: 'Front-end developer intern',
     from: 'May 2022',
     until: 'Jun 2022',
-    link: '',
-    image: '',
+    link: 'https://mehrotech.ir',
+    image: mehrotech,
     color: '#2E4C94',
   },
 ];
