@@ -17,15 +17,15 @@ const jsonLd = JSON.stringify({
   mainEntity: {
     '@id': '#main-author',
     '@type': 'Person',
-    name: 'Jahir Fiquitiva',
-    alternateName: ['jahirfiquitiva', 'jahirdotdev'],
+    name: 'Mani Ramezanpour',
+    alternateName: ['maniramezanpour', 'manidotdev'],
     description:
       'Passionate and creative full-stack software engineer from Colombia 🇨🇴',
     image: 'https://jahir.dev/media/jahir/jahir-hd.jpg',
     sameAs: [
-      'https://github.com/jahirfiquitiva',
-      'https://linkedin.com/in/jahirfiquitiva',
-      'https://twitter.com/jahirfiquitiva',
+      'https://github.com/Maniramezanpour',
+      'https://linkedin.com/in/mani-ramezanpour',
+      'https://twitter.com/manirmps',
       'https://instagram.com/jahirfiquitiva',
     ],
   },
@@ -40,19 +40,19 @@ export default function AboutPage() {
           <span role={'img'} aria-label={'waving hand'}>
             👋
           </span>{' '}
-          Hey there! I&apos;m Jahir Fiquitiva, a full-stack software engineer
+          Hey there! I&apos;m Mani Ramezanpour, a full-stack software developer
           from{' '}
           <Link
-            title={'Colombia'}
+            title={'Iran'}
             href={'https://www.google.com/maps/place/Colombia/@4,-72z/'}
             data-umami-event={'Link to Colombia map'}
           >
-            Colombia{' '}
-            <span role={'img'} aria-label={'Colombia flag'}>
-              🇨🇴
+            Iran{' '}
+            <span role={'img'} aria-label={'iran flag'}>
+              🇮🇷
             </span>
           </Link>{' '}
-          with over five (5) years of professional experience. My pronouns are
+          with over two (2) years of professional experience. My pronouns are
           he/they.
         </p>
         <p className={'max-w-nice'}>
@@ -63,7 +63,7 @@ export default function AboutPage() {
         <p className={'max-w-nice'}>
           I&apos;m a huge advocate for open source and collaborating with the
           community. You can find my stash of websites, libraries, and apps on{' '}
-          <Link title={'GitHub'} href={'https://github.com/jahirfiquitiva'}>
+          <Link title={'GitHub'} href={'https://github.com/maniramezanpour'}>
             GitHub
           </Link>{' '}
           which have earned over 2K stars.
@@ -90,9 +90,9 @@ export default function AboutPage() {
           Feel free to reach out to me at{' '}
           <Link
             title={'Email'}
-            href={'mailto:hola@jahir.dev?subject=Hi%20Jahir!'}
+            href={'mailto:maniramznpoor2007@gmail.com?subject=Hi%20Mani!'}
           >
-            hola@jahir.dev
+            maniramznpoor2007@gmail.com
           </Link>
           , or find me on social media:
         </p>
@@ -109,8 +109,8 @@ export default function AboutPage() {
 }
 
 export const metadata = createMetadata({
-  title: 'About – Jahir Fiquitiva',
-  description: 'Learn more about me (Jahir Fiquitiva), my career and more',
+  title: 'About – Mani Ramezanpour',
+  description: 'Learn more about me (Mani Ramezanpour), my career and more',
   exactUrl: 'https://jahir.dev/about',
   keywords: ['bio', 'biography', 'information', 'about', 'career'],
 });

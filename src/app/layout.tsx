@@ -15,24 +15,25 @@ import { Meta } from './meta';
 
 export const metadata = {
   ...createMetadata({
-    title: 'Jahir Fiquitiva – Full-stack Software Engineer',
+    title: 'Mani Ramezanpour – Full-stack Software developer',
     description:
       // eslint-disable-next-line max-len
-      "I'm a passionate and creative full-stack software engineer from Colombia 🇨🇴. Visit my website to learn more about me and my projects",
+      'Innovative and dedicated fullstack software developer with a strong grasp of JavaScript/TypeScript and some DevOps from Iran. Visit my website to learn more about me and my projects',
     keywords: [
-      'jahir fiquitiva',
-      'jahir',
-      'fiquitiva',
-      'jahirfiquitiva',
+      'Mani Ramezanpour',
+      'Mani',
+      'Ramezanpour',
+      'maniramezanpour',
       'open-source',
       'full-stack',
       'software engineer',
-      'colombia',
+      'software developer',
+      'iran',
       'bio',
       'developer',
       'portfolio',
       'development',
-      'android',
+      'devops',
       'web',
     ],
   }),

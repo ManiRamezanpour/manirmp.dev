@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 const greetings = [
   'Hello, world',
-  'Hola, mundo',
+  'سلام, دنیا',
   'Ciao, mondo',
   'Hallo, Welt',
   'Bonjour, monde',

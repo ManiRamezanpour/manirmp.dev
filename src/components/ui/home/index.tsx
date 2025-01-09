@@ -42,7 +42,7 @@ export const Intro = () => {
           </p>
           <SubHeader>
             <span>
-              I am <Name>Jahir Fiquitiva</Name>
+              I am <Name>Mani Ramezanpour</Name>
             </span>
             <Verified />
           </SubHeader>
@@ -50,21 +50,23 @@ export const Intro = () => {
 
         <p className={'text-pretty flex flex-col gap-2 max-w-[28rem]'}>
           <span>
-            Passionate and creative full-stack software engineer from{' '}
+            Innovative and dedicated fullstack software developer with a strong
+            grasp of JavaScript/TypeScript and some DevOps experience.{' '}
             <Link
               title={'Colombia'}
               href={'https://www.google.com/maps/place/Colombia/@4,-72z/'}
               data-umami-event={'Link to Colombia map'}
             >
-              Colombia{' '}
-              <span role={'img'} aria-label={'Colombia flag'}>
-                🇨🇴
+              Iran{' '}
+              <span role={'img'} aria-label={'iran flag'}>
+                🇮🇷
               </span>
             </Link>
           </span>
           <span>
-            Detail-driven, I strive to build great-looking, user-friendly
-            software while enhancing my skills along the way
+            Detail-driven, I focus on problem-solving, designing, and finding
+            the best solutions to build great-looking, user-friendly software
+            while continuously enhancing my skills.
           </span>
         </p>
       </div>

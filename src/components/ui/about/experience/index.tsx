@@ -1,7 +1,8 @@
-import bpsmart from '@/assets/images/experience/bpsmart.jpeg';
-import msco from '@/assets/images/experience/msco.jpeg';
-import nwyc from '@/assets/images/experience/nwyc.jpeg';
-import servex from '@/assets/images/experience/servex.jpeg';
+import eightsense from '@/assets/images/experience/8thsense_logo.jpeg';
+import minis from '@/assets/images/experience/minis.avif';
+import aval from '@/assets/images/experience/aval.jpg';
+import sampad from '@/assets/images/experience/sampad.jpeg';
+import tourino from '@/assets/images/experience/tourio-logo.png';
 import { Icon } from '@/components/atoms/icon';
 import { LinkButton } from '@/components/atoms/link-button';
 import { Section } from '@/components/atoms/section';
@@ -14,40 +15,49 @@ import {
 
 const experience: Array<ExperienceRecord> = [
   {
-    company: 'National Write Your Congressman, Inc.',
-    position: 'Frontend Engineer',
-    from: 'Mar 2023',
-    link: 'https://www.nwyc.com/',
-    image: nwyc,
-    color: '#2E4C94',
-  },
-  {
-    company: 'Matter Supply Co.',
-    position: 'Software Engineer',
-    from: 'Sep 2020',
-    until: 'Nov 2022',
-    link: 'https://mattersupply.co/',
-    image: msco,
+    company: 'Association Manager (Volunteer working).',
+    position: 'Team Manager, Software developer',
+    from: 'Nov 2024',
+    link: 'https://sampad.school/',
+    image: sampad,
     color: '#4C4C59',
   },
   {
-    company: 'BPSmart',
-    position: 'Technical Development Lead',
-    from: 'Jan 2020',
-    until: 'Aug 2020',
-    link: 'https://www.bpsmart.ai/',
-    image: bpsmart,
+    company: '8thsense, Inc.',
+    position: 'Software developer',
+    from: 'Jan 2024',
+    until: 'Aug 2024',
+    link: 'https://www.8thsense.de/',
+    image: eightsense,
+    color: '#2E4C94',
+  },
+  {
+    company: 'Royan ICT (Tourino)',
+    position: 'Backend developer',
+    from: 'OCT 2023',
+    until: 'Jan 2024',
+    link: 'https://www.tourino.app/',
+    image: tourino,
     color: '#8FD554',
   },
   {
-    company: 'Servex',
-    position: 'Full Stack Developer',
-    from: 'Sep 2018',
-    until: 'Dec 2019',
-    link: 'https://www.servex.com.pe/',
-    image: servex,
+    company: 'Minis Studio',
+    position: 'Game developer, JS developer',
+    from: 'May 2023',
+    until: 'Aug 2023',
+    link: 'https://www.minis.dev/',
+    image: minis,
     color: '#4AA1D1',
+  },
+  {
+    company: 'Aval co',
+    position: 'Web developer',
+    from: 'OCT 2022',
+    until: 'NOV 2022',
+    link: 'https://www.aval-co.de/',
+    image: aval,
     last: true,
+    color: '#8FD554',
   },
 ];
 
