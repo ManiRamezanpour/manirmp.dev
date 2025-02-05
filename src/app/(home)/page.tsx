@@ -1,16 +1,14 @@
+import { Skills } from '@/components/ui/about/skills';
 import { Intro } from '@/components/ui/home';
-import { ProjectsList } from '@/components/ui/projects';
-
-import { FeaturedBlogPosts } from './featured-posts';
 
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  image: 'https://jahir.dev/media/jahir/jahir-hd.jpg',
+  image: '../../assets/photo.jpg',
   url: 'https://jahir.dev',
   sameAs: ['https://jahir.dev/about'],
-  logo: 'https://jahir.dev/media/brand/logo-full.png',
-  name: 'Jahir Fiquitiva',
+  logo: '../../assets/photo.jpg',
+  name: 'Mani Ramezanpour',
   description:
     // eslint-disable-next-line max-len
     'A full-stack JS/TS Developer with 3 years of hands-on experience in creating high-performance web applications.',
@@ -22,8 +20,7 @@ export default function HomePage() {
   return (
     <>
       <Intro />
-      <FeaturedBlogPosts />
-      <ProjectsList title={'Featured projects'} featuredOnly />
+      <Skills />
       <script type={'application/ld+json'} suppressHydrationWarning>
         {jsonLd}
       </script>

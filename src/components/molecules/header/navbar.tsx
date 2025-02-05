@@ -1,4 +1,3 @@
-import { Logo } from '@/components/atoms/logo';
 import type { TWComponentProps } from '@/utils/cx';
 import cx from '@/utils/cx';
 
@@ -23,21 +22,6 @@ const toolbarLinksList = [
     href: '/about',
     className: 'text-green',
   },
-  {
-    title: 'Blog',
-    href: '/blog',
-    className: 'text-orange',
-  },
-  {
-    title: 'Projects',
-    href: '/projects',
-    className: 'text-purple',
-  },
-  {
-    title: 'Uses',
-    href: '/uses',
-    className: 'text-blue',
-  },
 ];
 
 interface NavbarProps extends TWComponentProps<typeof Nav> {
@@ -51,14 +35,14 @@ export const Navbar = (props: NavbarProps) => {
   return (
     <Nav id={'navigation'} className={className}>
       <NavLink
-        title={'Jahir Fiquitiva - Home Page'}
+        title={'Mani Ramezanpour - Home Page'}
         href={'/'}
         className={'gap-2 hocus:bg-toolbar-highlight'}
         aria-current={props.path === '/' ? 'page' : undefined}
       >
-        <Logo className={'saturate-125 dark:saturate-150'} />
+        {/* <Logo className={'saturate-125 dark:saturate-150'} /> */}
         <span className={'text-accent saturate-125 dark:saturate-150'}>
-          Jahir Fiquitiva
+          Mani Ramezanpour
         </span>
       </NavLink>
       <LinksList

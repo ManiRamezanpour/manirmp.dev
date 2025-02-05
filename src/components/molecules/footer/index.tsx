@@ -1,4 +1,3 @@
-import { Logo } from '@/components/atoms/logo';
 import cx from '@/utils/cx';
 
 import { SocialLinks } from '../social-links';
@@ -18,7 +17,7 @@ export const Footer = () => {
     <StyledFooter>
       <Details>
         <FooterLink
-          title={'Jahir Fiquitiva - Home Page'}
+          title={'Mani Ramezanpour - Home Page'}
           href={'/'}
           className={cx(
             'self-start',
@@ -28,13 +27,13 @@ export const Footer = () => {
             'dark:hocus:decoration-brand-300',
           )}
         >
-          <Logo />
-          <span className={'text-accent'}>Jahir Fiquitiva</span>
+          {/* <Logo /> */}
+          <span className={'text-accent'}>Mani Ramezanpour</span>
         </FooterLink>
         <Description>
-          Passionate and creative full-stack software engineer from Colombia{' '}
-          <span role={'img'} aria-label={'Colombia flag'}>
-            🇨🇴
+          Passionate and creative full-stack software developer from Colombia{' '}
+          <span role={'img'} aria-label={'Iran Flag'}>
+            🇮🇷
           </span>
         </Description>
         <SocialLinks />

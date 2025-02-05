@@ -14,19 +14,9 @@ export const linksGroups = [
         className: 'text-green',
       },
       {
-        title: 'Blog',
-        href: '/blog',
-        className: 'text-orange',
-      },
-      {
         title: 'Projects',
         href: '/projects',
         className: 'text-purple',
-      },
-      {
-        title: 'Uses',
-        href: '/uses',
-        className: 'text-blue',
       },
     ],
   },
@@ -46,19 +36,6 @@ export const linksGroups = [
         props: {
           ignoreNextLink: true,
         },
-      },
-      {
-        title: 'RSS Feed',
-        href: '/feed.xml',
-        className: 'text-orange',
-        props: {
-          'data-umami-event': 'RSS feed',
-        },
-      },
-      {
-        title: 'Colophon',
-        href: '/colophon',
-        className: 'text-purple',
       },
       {
         title: 'Back to Top',
