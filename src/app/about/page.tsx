@@ -38,8 +38,8 @@ export default function AboutPage() {
           <span role={'img'} aria-label={'waving hand'}>
             👋 Hey there!
           </span>{' '}
-          I'm Mani Ramezanpour, a results-oriented Full-Stack Software Developer
-          based in{' '}
+          I&apos;m Mani Ramezanpour, a results-oriented Full-Stack Software
+          Developer based in{' '}
           <Link
             title={'Iran'}
             href={'https://www.google.com/maps/place/Colombia/@4,-72z/'}

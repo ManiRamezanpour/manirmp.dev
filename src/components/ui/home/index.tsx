@@ -44,10 +44,10 @@ export const Intro = () => {
             'text-[2.5rem] md:text-8xl font-[1200] leading-tight mb-6 tracking-medium',
           )}
         >
-          <span className="block text-8xl dark:text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 drop-shadow-sm">
+          <span className={'block text-8xl dark:text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 drop-shadow-sm'}>
             Hi,{' '}
-            <span className="mt-2">
-              I'm{' '}
+            <span className={'mt-2'}>
+              I&apos;m{' '}
               <Name
                 className={cx(
                   'text-7xl md:text-9xl font-black bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent leading-none drop-shadow',
@@ -71,22 +71,22 @@ export const Intro = () => {
                 'bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent',
               )}
             >
-              {'Full-Stack Software Developer'}
+              Full-Stack Software Developer
             </Highlight>
             {', based in '}
             <Link
               title={'Netherlands'}
-              href="https://www.google.com/maps/place/Netherlands"
+              href={'https://www.google.com/maps/place/Netherlands'}
               data-umami-event={'Link to Netherlands map'}
             >
               {'the Netherlands '}
               <span role={'img'} aria-label={'netherlands flag'}>
-                {'🇳🇱'}
+                🇳🇱
               </span>
             </Link>
             {'. I specialize in creating '}
             <Highlight className={cx('bg-pink-500/20 text-pink-400')}>
-              'robust, scalable, and user-centric applications'
+              robust, scalable, and user-centric applications
             </Highlight>
             {', with expertise in '}
             <Highlight className={cx('bg-blue-500/20 text-blue-400')}>
@@ -96,7 +96,7 @@ export const Intro = () => {
             <Highlight className={cx('bg-blue-500/20 text-blue-400')}>
               TypeScript
             </Highlight>
-            {'.'}
+            .
           </p>
 
           <p>
@@ -124,19 +124,15 @@ export const Intro = () => {
             >
               maintainability
             </Highlight>
-            {
-              '. I continuously refine my skills, adopt modern practices, and deliver elegant solutions that make an impact.'
-            }
+            . I continuously refine my skills, adopt modern practices, and deliver elegant solutions that make an impact.
           </p>
 
           <p>
             {'Passionate about innovation, I thrive on building '}
             <Highlight className={cx('bg-purple-500/20 text-purple-400')}>
-              {'intuitive, high-performance web applications'}
+              intuitive, high-performance web applications
             </Highlight>
-            {
-              ', and exploring emerging technologies to create meaningful digital experiences.'
-            }
+            , and exploring emerging technologies to create meaningful digital experiences.
           </p>
         </div>
       </div>

@@ -1,9 +1,7 @@
 /* eslint-disable max-len */
 import { Icon } from '@/components/atoms/icon';
 
-import {
-  GitHubSponsorsLink, BuyMeACoffeeLink
-} from './buttons.styles';
+import { GitHubSponsorsLink, BuyMeACoffeeLink } from './buttons.styles';
 
 export const DonateButtons = () => {
   return (

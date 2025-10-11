@@ -7,8 +7,6 @@ import { DonateButtons } from '@/components/ui/donate/buttons';
 import { getColoredTextClasses } from '@/utils/colored-text';
 import cx from '@/utils/cx';
 import { createMetadata } from '@/utils/metadata';
-
-
 export default function DonatePage() {
   return (
     <>

@@ -21,7 +21,6 @@ export default function HomePage() {
     <>
       <Intro />
       <Skills />
-      {/* <FeaturedVolunteering /> */}
       <script type={'application/ld+json'} suppressHydrationWarning>
         {jsonLd}
       </script>

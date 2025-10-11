@@ -51,7 +51,11 @@ export const Navbar = (props: NavbarProps) => {
         aria-current={props.path === '/' ? 'page' : undefined}
       >
         {/* <Logo className={'saturate-125 dark:saturate-150'} /> */}
-        <span className={'text-xl font-bold text-accent saturate-125 dark:saturate-150'}>
+        <span
+          className={
+            'text-xl font-bold text-accent saturate-125 dark:saturate-150'
+          }
+        >
           Mani Ramezanpour
         </span>
       </NavLink>
