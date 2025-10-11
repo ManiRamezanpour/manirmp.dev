@@ -1,11 +1,9 @@
 import { unstable_cache as cache } from 'next/cache';
 
 const imagesAlts: Array<string> = [
-  "At Festival Estéreo Picnic – Mar '23",
-  "At The Angel of Independence in Mexico City – Oct '23",
-  "In Valle de Bravo, México – Oct '23",
-  "In Medellin, Colombia – Nov '23",
-  "In Medellin, Colombia – Nov '23",
+  "First seminar of SITCA association – Nov '24",
+  "Typing speed competition – Oct '25",
+  "Worldskills competition web technology – Jul '22",
 ];
 
 export const getAboutImage = cache(

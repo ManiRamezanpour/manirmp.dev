@@ -7,7 +7,7 @@ import { Main } from '@/components/atoms/main';
 import { Footer } from '@/components/molecules/footer';
 import { Header } from '@/components/molecules/header';
 import { Providers } from '@/providers';
-import { Inter, Manrope } from '@/styles/fonts';
+import { Inter } from '@/styles/fonts';
 import cx from '@/utils/cx';
 import { createMetadata } from '@/utils/metadata';
 
@@ -48,7 +48,7 @@ export default function RootLayout(props: PropsWithChildren) {
       lang={'en'}
       className={cx(
         Inter.variable,
-        Manrope.variable,
+        // Manrope.variable,
         IS_TEMPLATE === 'true' ? 'template' : '',
       )}
       suppressHydrationWarning

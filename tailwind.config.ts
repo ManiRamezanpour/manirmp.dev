@@ -105,18 +105,18 @@ const config: Config = {
       },
       colors: {
         brand: {
-          DEFAULT: '##2dd4bf',
-          950: '#042f2e',
-          900: '#134e4a',
-          800: '#115e59',
-          700: '#0f766e',
-          600: '#0d9488',
-          500: '#14b8a6',
-          400: '#2dd4bf',
-          300: '#5eead4',
-          200: '#99f6e4',
-          100: '#ccfbf1',
-          50: '#ecfeff',
+          DEFAULT: '#f43f5e', // warm pink-red base
+          950: '#6b021d', // dark wine
+          900: '#9d174d', // deep rose
+          800: '#ec4899', // vibrant pink
+          700: '#f472b6', // hot pink
+          600: '#f9a8d4', // soft pink
+          500: '#CC404E', // bright yellow
+          400: '##004FB0', // soft yellow
+          300: '#34d399', // mint green
+          200: '#6ee7b7', // light green
+          100: '#93c5fd', // sky blue
+          50: '#e0f2fe', // pale blue
         },
         light: THEME_COLOR_LIGHT,
         dark: THEME_COLOR_DARK,

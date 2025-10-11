@@ -10,7 +10,6 @@ import {
   LinksList,
   StyledFooter,
 } from './footer.styles';
-import { FooterNowPlaying } from './now-playing';
 
 export const Footer = () => {
   return (
@@ -31,9 +30,9 @@ export const Footer = () => {
           <span className={'text-accent'}>Mani Ramezanpour</span>
         </FooterLink>
         <Description>
-          Passionate and creative full-stack software developer from Iran{' '}
+          Passionate and creative full-stack software developer based in{' '}
           <span role={'img'} aria-label={'Iran Flag'}>
-            🇮🇷
+            Netheralnd 🇳🇱
           </span>
         </Description>
         <SocialLinks />
@@ -79,7 +78,7 @@ export const Footer = () => {
           'flex flex-row items-center justify-start self-start col-span-2 min-h-6'
         }
       >
-        <FooterNowPlaying />
+        {/* <FooterNowPlaying /> */}
       </div>
     </StyledFooter>
   );

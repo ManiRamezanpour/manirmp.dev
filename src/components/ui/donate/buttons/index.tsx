@@ -2,10 +2,7 @@
 import { Icon } from '@/components/atoms/icon';
 
 import {
-  AmazonLink,
-  GitHubSponsorsLink,
-  PayPalLink,
-  BuyMeACoffeeLink,
+  GitHubSponsorsLink, BuyMeACoffeeLink
 } from './buttons.styles';
 
 export const DonateButtons = () => {
@@ -14,7 +11,7 @@ export const DonateButtons = () => {
       <h2 className={'text-lg'}>Donate via</h2>
       <div className={'flex flex-row items-center gap-4 flex-wrap'}>
         <GitHubSponsorsLink
-          href={'https://github.com/sponsors/jahirfiquitiva'}
+          href={'https://github.com/sponsors/maniramezanpour'}
           title={'Sponsor Jahir on GitHub'}
           data-umami-event={'Donate'}
           data-umami-event-via={'GitHub Sponsors'}
@@ -28,7 +25,7 @@ export const DonateButtons = () => {
           <span>GitHub Sponsors</span>
         </GitHubSponsorsLink>
         <BuyMeACoffeeLink
-          href={'https://buymeacoffee.com/jahirfiquitiva'}
+          href={'https://buymeacoffee.com/manirmp'}
           title={'Buy Jahir a Coffee'}
           data-umami-event={'Donate'}
           data-umami-event-via={'Buy me a Coffee'}
@@ -41,7 +38,7 @@ export const DonateButtons = () => {
           />
           <span>Buy me a Coffee</span>
         </BuyMeACoffeeLink>
-        <PayPalLink
+        {/* <PayPalLink
           href={'https://jahir.xyz/DonatePayPal'}
           title={'Donate to Jahir via PayPal'}
           data-umami-event={'Donate'}
@@ -54,8 +51,8 @@ export const DonateButtons = () => {
             className={'size-5'}
           />
           <span>PayPal</span>
-        </PayPalLink>
-        <AmazonLink
+        </PayPalLink> */}
+        {/* <AmazonLink
           href={
             'https://www.amazon.com/hz/wishlist/ls/IEAGJXCWA83F?ref_=wl_share'
           }
@@ -70,7 +67,7 @@ export const DonateButtons = () => {
             className={'size-5'}
           />
           <span>Buy gift</span>
-        </AmazonLink>
+        </AmazonLink> */}
       </div>
     </div>
   );

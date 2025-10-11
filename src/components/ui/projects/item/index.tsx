@@ -5,7 +5,6 @@ import { hexToRgb } from '@/utils/color';
 import cx from '@/utils/cx';
 
 import { ProjectIcon, ProjectLink } from './item.styles';
-import { StarsCounter } from './stars-count';
 
 interface ProjectItemProps {
   project: Project;
@@ -42,7 +41,7 @@ export const ProjectItem = ({ project }: ProjectItemProps) => {
           >
             {project.name}
           </p>
-          <StarsCounter repo={project.repo || ''} owner={project.owner} />
+          {/* <StarsCounter repo={project.repo || ''} owner={project.owner} /> */}
         </div>
         <p className={'text-2xs text-secondary-txt line-clamp-2 text-pretty'}>
           {project.description}

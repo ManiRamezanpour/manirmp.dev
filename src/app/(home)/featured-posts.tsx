@@ -1,120 +1,142 @@
+'use client';
+
 import { unstable_cache as cache } from 'next/cache';
 import { Suspense } from 'react';
 
-import { getTopThreeBlogPosts } from '@/actions/counters';
+// import { getVolunteeringProjects } from '@/actions/volunteering';
 import { Icon } from '@/components/atoms/icon';
 import { LinkButton } from '@/components/atoms/link-button';
 import { Section } from '@/components/atoms/section';
-import { BlogPostItem } from '@/components/ui/blog/item';
-import { BlogPostItemSkeleton } from '@/components/ui/blog/item/skeleton';
-import { RSSFeedButton } from '@/components/ui/blog/rss-feed-button';
-import {
-  allReadableBlogs,
-  sortBlogPostsByDate,
-  type PartialBlog,
-} from '@/utils/blog';
-import { getColoredTextClasses } from '@/utils/colored-text';
 import cx from '@/utils/cx';
+import { getColoredTextClasses } from '@/utils/colored-text';
 
-const getFeaturedPosts = cache(
-  async (): Promise<Array<PartialBlog>> => {
+// ---------------------------
+// Volunteering Project Types
+// ---------------------------
+export interface VolunteeringProject {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+  link?: string;
+}
+
+// ---------------------------
+// Fetch and cache data
+// ---------------------------
+const getFeaturedVolunteering = cache(
+  async (): Promise<VolunteeringProject[]> => {
     try {
-      const [latestPost, ...sortedPosts] =
-        allReadableBlogs.sort(sortBlogPostsByDate);
-      const topThree = await getTopThreeBlogPosts(latestPost.slug);
-      if (!topThree.length) return [latestPost];
-      const mostViewedPost =
-        topThree[Math.floor(Math.random() * topThree.length)];
-      const otherPosts = sortedPosts.filter(
-        (it) => mostViewedPost.slug !== it.slug,
-      );
-      const randomPost =
-        otherPosts[Math.floor(Math.random() * otherPosts.length)];
-      return [
-        latestPost,
-        sortedPosts.find((it) => mostViewedPost.slug === it.slug),
-        randomPost,
-      ].filter(Boolean) as Array<PartialBlog>;
+      const projects = await getVolunteeringProjects();
+      return projects.slice(0, 3);
     } catch (e) {
+      console.error('Error loading volunteering projects:', e);
       return [];
     }
   },
-  ['featured-posts'],
+  ['featured-volunteering'],
   { revalidate: 86400 },
 );
 
-const BlogPostsListFallback = () => {
+// ---------------------------
+// Skeleton Loader
+// ---------------------------
+const VolunteeringListFallback = () => {
   return (
     <>
-      <li>
-        <BlogPostItemSkeleton />
-      </li>
-      <li>
-        <BlogPostItemSkeleton />
-      </li>
-      <li>
-        <BlogPostItemSkeleton />
-      </li>
-    </>
-  );
-};
-
-const FeaturedBlogPostsList = async () => {
-  const featuredPosts = await getFeaturedPosts();
-  return (
-    <>
-      {featuredPosts.map((post) => (
-        <li className={'block'} key={post.slug}>
-          <BlogPostItem post={post} fullDate />
+      {[1, 2, 3].map((i) => (
+        <li
+          key={i}
+          className="flex flex-col gap-3 p-4 rounded-2xl bg-gray-100 dark:bg-gray-800 animate-pulse"
+        >
+          <div className="h-40 w-full bg-gray-300 dark:bg-gray-700 rounded-xl" />
+          <div className="h-5 w-3/4 bg-gray-300 dark:bg-gray-700 rounded" />
+          <div className="h-4 w-1/2 bg-gray-300 dark:bg-gray-700 rounded" />
         </li>
       ))}
     </>
   );
 };
 
-export const FeaturedBlogPosts = () => (
-  <Section id={'blog'} className={'gap-6'}>
+// ---------------------------
+// Project Item Component
+// ---------------------------
+const VolunteeringItem = ({ project }: { project: VolunteeringProject }) => (
+  <li
+    key={project.id}
+    className="flex flex-col gap-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition"
+  >
+    <img
+      src={project.image}
+      alt={project.title}
+      className="w-full h-52 object-cover"
+    />
+    <div className="flex flex-col gap-2 p-4">
+      <h3 className="text-xl font-semibold text-brand-600">{project.title}</h3>
+      <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-3">
+        {project.description}
+      </p>
+      <span className="text-xs text-gray-500 mt-auto">{project.date}</span>
+
+      {project.link && (
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-brand-500 hover:text-brand-600 mt-2"
+        >
+          View more →
+        </a>
+      )}
+    </div>
+  </li>
+);
+
+// ---------------------------
+// Featured Volunteering List
+// ---------------------------
+const FeaturedVolunteeringList = async () => {
+  const projects = await getFeaturedVolunteering();
+  return (
+    <>
+      {projects.map((project) => (
+        <VolunteeringItem key={project.id} project={project} />
+      ))}
+    </>
+  );
+};
+
+// ---------------------------
+// Main Section
+// ---------------------------
+export const FeaturedVolunteering = () => (
+  <Section id="volunteering" className="gap-6">
     <div
       className={cx(
         'w-full flex flex-col items-start gap-4',
         'tablet-sm:flex-row tablet-sm:items-center tablet-sm:justify-between',
       )}
     >
-      <h2 className={getColoredTextClasses('orange')}>From the blog</h2>
-      <div
-        className={cx(
-          'flex flex-row flex-1 items-center gap-4 self-end w-full',
-          'tablet-sm:w-auto tablet-sm:justify-end',
-        )}
-      >
-        <RSSFeedButton
-          className={'max-mobile-lg:justify-center max-mobile-lg:flex-1'}
-        />
+      <h2 className={getColoredTextClasses('green')}>Volunteering Work</h2>
 
-        <LinkButton
-          title={'View all'}
-          href={'/blog'}
-          className={cx(
-            'pr-3.5',
-            'justify-center max-mobile-lg:flex-1',
-            'mobile-lg:self-start mobile-lg:justify-start',
-          )}
-          data-umami-event={'View all blog posts'}
-        >
-          <Icon
-            className={'size-5'}
-            path={
-              'M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z'
-            }
-          />
-          <span>View all</span>
-        </LinkButton>
-      </div>
+      <LinkButton
+        title="View all"
+        href="/volunteering"
+        className={cx('justify-center tablet-sm:w-auto')}
+        data-umami-event="View all volunteering projects"
+      >
+        <Icon
+          className="size-5"
+          path="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
+        />
+        <span>View all</span>
+      </LinkButton>
     </div>
 
-    <ol className={'flex flex-col gap-2'}>
-      <Suspense fallback={<BlogPostsListFallback />}>
-        <FeaturedBlogPostsList />
+    <ol className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <Suspense fallback={<VolunteeringListFallback />}>
+        <FeaturedVolunteeringList />
       </Suspense>
     </ol>
   </Section>

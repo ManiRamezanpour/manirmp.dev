@@ -14,12 +14,22 @@ import {
   NavPageLink,
   NavPageLinkText,
 } from './navbar.styles';
-import { ThemeToggle } from './theme-toggle';
+import ThemeToggle from './theme-toggle';
 
 const toolbarLinksList = [
   {
     title: 'About',
     href: '/about',
+    className: 'text-green',
+  },
+  {
+    title: 'Projects',
+    href: '/projects',
+    className: 'text-green',
+  },
+  {
+    title: 'Donate',
+    href: '/donate',
     className: 'text-green',
   },
 ];
@@ -41,7 +51,7 @@ export const Navbar = (props: NavbarProps) => {
         aria-current={props.path === '/' ? 'page' : undefined}
       >
         {/* <Logo className={'saturate-125 dark:saturate-150'} /> */}
-        <span className={'text-accent saturate-125 dark:saturate-150'}>
+        <span className={'text-xl font-bold text-accent saturate-125 dark:saturate-150'}>
           Mani Ramezanpour
         </span>
       </NavLink>

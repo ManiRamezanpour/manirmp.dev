@@ -19,8 +19,7 @@ const jsonLd = JSON.stringify({
     name: 'Mani Ramezanpour',
     alternateName: ['maniramezanpour', 'manidotdev'],
     description:
-      'Passionate and creative full-stack software engineer from Colombia 🇨🇴',
-    image: 'https://jahir.dev/media/jahir/jahir-hd.jpg',
+      'Passionate and creative full-stack software engineer based in Netherland',
     sameAs: [
       'https://github.com/Maniramezanpour',
       'https://linkedin.com/in/mani-ramezanpour',
@@ -37,22 +36,24 @@ export default function AboutPage() {
         <h1 className={getColoredTextClasses('green')}>About</h1>
         <p className={'max-w-nice'}>
           <span role={'img'} aria-label={'waving hand'}>
-            👋
+            👋 Hey there!
           </span>{' '}
-          Hey there! I&apos;m Mani Ramezanpour, a full-stack software developer
-          from{' '}
+          I'm Mani Ramezanpour, a results-oriented Full-Stack Software Developer
+          based in{' '}
           <Link
             title={'Iran'}
             href={'https://www.google.com/maps/place/Colombia/@4,-72z/'}
             data-umami-event={'Link to Colombia map'}
           >
-            Iran{' '}
+            Netherland{' '}
             <span role={'img'} aria-label={'iran flag'}>
-              🇮🇷
+              🇳🇱
             </span>
           </Link>{' '}
-          with over two (2) years of professional experience. My pronouns are
-          he/they.
+          With three years of professional experience, my focus is on designing
+          and building web applications that achieve high standards for
+          performance, accessibility, and visual quality. (My pronouns are
+          he/they.)
         </p>
         <p className={'max-w-nice'}>
           I focus on details and I&apos;m passionate about crafting software
@@ -60,25 +61,20 @@ export default function AboutPage() {
         </p>
         <Photo />
         <p className={'max-w-nice'}>
-          I&apos;m a huge advocate for open source and collaborating with the
-          community. You can find my stash of websites, libraries, and apps on{' '}
-          <Link title={'GitHub'} href={'https://github.com/maniramezanpour'}>
-            GitHub
+          My dedication to detail and technical excellence was rigorously tested
+          through my participation in the WorldSkills Competition in Web
+          Technology. I specialize in engineering full-stack software products
+          that are not only visually stunning and highly accessible but are also
+          built with clean, standards-compliant code for easy maintenance and
+          long-term stability.
+          <Link title={'GitHub'} href={'worldskills.org'}>
+            Worldskills
           </Link>{' '}
-          which have earned over 2K stars.
         </p>
         <p className={'max-w-nice'}>
           I&apos;m all about diving into challenges improving and expanding my
           skillset and I thrive in globally-remote teams that value people and
           embrace trust, kindness, and inclusion.
-        </p>
-        <p className={'max-w-nice'}>
-          If you&apos;re curious about the hardware and software tools I use
-          every day, feel free to check out the{' '}
-          <Link title={'Uses page'} href={'/uses'}>
-            uses
-          </Link>{' '}
-          page.
         </p>
       </Section>
       <Section id={'contact'} className={'-mt-5 gap-2.5'}>

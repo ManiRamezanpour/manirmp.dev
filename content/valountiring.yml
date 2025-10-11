@@ -1,0 +1,61 @@
+- order: 0
+  name: Sari Charity Food Distribution
+  description: Helped distribute healthy meals to underprivileged families every weekend in Sari, coordinating with local volunteers and logistics teams.
+  icon: volunteering/food.png
+  # preview: volunteering/food-preview.png
+  url: https://example.com/sari-charity
+  color: '#F4A261'
+  repo: food-charity
+
+- order: 1
+  name: Student Tech Mentorship
+  description: Mentored high school students in coding, web development, and problem-solving as part of a community outreach program.
+  icon: volunteering/mentorship.png
+  # preview: volunteering/mentorship-preview.png
+  url: https://example.com/student-mentorship
+  color: '#2A9D8F'
+  repo: mentorship
+
+- order: 2
+  name: Sampad School Event Organizer
+  description: Organized and managed multiple school tech events and competitions, improving collaboration and event efficiency.
+  icon: volunteering/event.png
+  # preview: volunteering/event-preview.png
+  url: https://sampad.school
+  color: '#3E95FB'
+  repo: sampad-events
+
+- order: 3
+  name: Environmental Awareness Campaign
+  description: Participated in a student-led initiative to promote environmental awareness, including park cleanups and educational workshops.
+  icon: volunteering/eco.png
+  # preview: volunteering/eco-preview.png
+  url: https://example.com/eco-awareness
+  color: '#4CAF50'
+  repo: eco-campaign
+
+- order: 4
+  name: University Tech Support Volunteer
+  description: Assisted university staff in maintaining computer labs, resolving network issues, and managing student accounts.
+  icon: volunteering/support.png
+  # preview: volunteering/support-preview.png
+  url: https://example.com/tech-support
+  color: '#1976D2'
+  repo: uni-support
+
+- order: 5
+  name: WorldSkills Iran Volunteer
+  description: Supported WorldSkills Iran competitions in web technology, helping coordinate contestants and maintain the technical environment.
+  icon: volunteering/worldskills.png
+  # preview: volunteering/worldskills-preview.png
+  url: https://worldskillsiran.ir
+  color: '#E63946'
+  repo: worldskills
+
+- order: 999999
+  name: More volunteering projects...
+  description: Explore additional volunteering projects and collaborations.
+  icon: other/more.png
+  url: https://example.com/more-volunteering
+  color: '#92a3b5'
+  hide: true

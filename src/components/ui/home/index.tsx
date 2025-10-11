@@ -1,100 +1,152 @@
 /* eslint-disable max-len */
-import photo from '@/assets/images/photo.jpg';
-import { Icon } from '@/components/atoms/icon';
-import { Img } from '@/components/atoms/img';
+import type { ReactNode } from 'react';
 import { Link } from '@/components/atoms/link';
-import { LinkButton } from '@/components/atoms/link-button';
 import { Section } from '@/components/atoms/section';
 import { SocialLinks } from '@/components/molecules/social-links';
 import cx from '@/utils/cx';
-
-import { Name, SubHeader, WavingSpan } from './intro.styles';
-import { Verified } from './verified';
-import { WavingHello } from './waving-hello';
-
+import { Name } from './intro.styles';
+import { Img } from '@/components/atoms/img';
+import photo from '@/assets/images/photo.jpg';
 export const Intro = () => {
+  const Highlight = ({
+    children,
+    className = '',
+  }: {
+    children: ReactNode;
+    className?: string;
+  }) => (
+    <span className={cx('px-2 py-1 rounded-md font-semibold', className)}>
+      {children}
+    </span>
+  );
+
   return (
-    <Section id={'intro'} className={'gap-6'}>
+    <Section id={'intro'} className={cx('gap-8')}>
       <div
-        className={'flex flex-col gap-5 tablet-sm:block tablet-sm:space-y-4'}
+        className={cx(
+          'flex flex-col gap-6 tablet-sm:block tablet-sm:space-y-5',
+        )}
       >
         <Img
           src={photo}
-          alt={'Photo of Jahir Fiquitiva'}
-          width={160}
-          height={160}
+          alt={'Photo of manirmp.tech'}
+          width={170}
+          height={170}
           priority
           className={cx(
-            'rounded-full tablet-sm:float-right',
-            'max-w-28 mobile-lg:max-w-30 tablet-sm:max-w-36 tablet-md:max-w-40',
+            'rounded-full tablet-sm:float-right border-4 border-gradient-to-tr from-blue-400 to-purple-500',
+            'max-w-36 mobile-lg:max-w-40 tablet-sm:max-w-44 tablet-md:max-w-48',
           )}
         />
-        <h1 className={'flex flex-col gap-1 tablet-sm:!-mt-2'}>
-          <p
-            className={
-              'flex flex-row items-center gap-1 text-shadow shadow-yellow-300 dark:text-shadow-none min-h-8'
-            }
-          >
-            <WavingSpan role={'img'} aria-label={'waving hand'}>
-              👋
-            </WavingSpan>
-            <WavingHello />
-          </p>
-          <SubHeader>
-            <span>
-              I am <Name>Mani Ramezanpour</Name>
+
+        <h1
+          className={cx(
+            'text-[2.5rem] md:text-8xl font-[1200] leading-tight mb-6 tracking-medium',
+          )}
+        >
+          <span className="block text-8xl dark:text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 drop-shadow-sm">
+            Hi,{' '}
+            <span className="mt-2">
+              I'm{' '}
+              <Name
+                className={cx(
+                  'text-7xl md:text-9xl font-black bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent leading-none drop-shadow',
+                )}
+              >
+                Mani <br /> Ramezanpour
+              </Name>
             </span>
-            <Verified />
-          </SubHeader>
+          </span>
         </h1>
 
-        <p className={'text-pretty flex flex-col gap-2 max-w-[28rem]'}>
-          <span>
-            Innovative and dedicated fullstack software developer with a strong
-            grasp of JavaScript/TypeScript and some DevOps experience.{' '}
-            <Link
-              title={'Colombia'}
-              href={'https://www.google.com/maps/place/Colombia/@4,-72z/'}
-              data-umami-event={'Link to Colombia map'}
+        <div
+          className={cx(
+            'text-md font-[400] flex flex-col gap-4 max-w-[40rem] leading-relaxed',
+          )}
+        >
+          <p>
+            {'I am a '}
+            <Highlight
+              className={cx(
+                'bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent',
+              )}
             >
-              Iran{' '}
-              <span role={'img'} aria-label={'iran flag'}>
-                🇮🇷
+              {'Full-Stack Software Developer'}
+            </Highlight>
+            {', based in '}
+            <Link
+              title={'Netherlands'}
+              href="https://www.google.com/maps/place/Netherlands"
+              data-umami-event={'Link to Netherlands map'}
+            >
+              {'the Netherlands '}
+              <span role={'img'} aria-label={'netherlands flag'}>
+                {'🇳🇱'}
               </span>
             </Link>
-          </span>
-          <span>
-            Detail-driven, I focus on problem-solving, designing, and finding
-            the best solutions to build great-looking, user-friendly software
-            while continuously enhancing my skills.
-          </span>
-        </p>
+            {'. I specialize in creating '}
+            <Highlight className={cx('bg-pink-500/20 text-pink-400')}>
+              'robust, scalable, and user-centric applications'
+            </Highlight>
+            {', with expertise in '}
+            <Highlight className={cx('bg-blue-500/20 text-blue-400')}>
+              JavaScript
+            </Highlight>
+            {' and '}
+            <Highlight className={cx('bg-blue-500/20 text-blue-400')}>
+              TypeScript
+            </Highlight>
+            {'.'}
+          </p>
+
+          <p>
+            My work emphasizes
+            <Highlight
+              className={cx(
+                'bg-yellow-400/20 text-yellow-500 font-semibold rounded-md px-1.5 py-0.5',
+              )}
+            >
+              performance
+            </Highlight>
+            {', '}
+            <Highlight
+              className={cx(
+                'bg-teal-500/20 text-teal-400 font-semibold rounded-md px-1.5 py-0.5',
+              )}
+            >
+              accessibility
+            </Highlight>
+            ,and
+            <Highlight
+              className={cx(
+                'bg-lime-500/20 text-lime-500 font-semibold rounded-md px-1.5 py-0.5',
+              )}
+            >
+              maintainability
+            </Highlight>
+            {
+              '. I continuously refine my skills, adopt modern practices, and deliver elegant solutions that make an impact.'
+            }
+          </p>
+
+          <p>
+            {'Passionate about innovation, I thrive on building '}
+            <Highlight className={cx('bg-purple-500/20 text-purple-400')}>
+              {'intuitive, high-performance web applications'}
+            </Highlight>
+            {
+              ', and exploring emerging technologies to create meaningful digital experiences.'
+            }
+          </p>
+        </div>
       </div>
 
       <div
         className={cx(
-          'flex flex-col gap-3 items-center',
+          'flex flex-col gap-4 items-center mt-6',
           'mobile-lg:flex-row mobile-lg:flex-wrap',
         )}
       >
-        <LinkButton
-          title={'More about me'}
-          href={'/about'}
-          className={cx(
-            'pr-3.5',
-            'justify-center max-mobile-lg:w-full',
-            'mobile-lg:self-start mobile-lg:justify-start',
-          )}
-          data-umami-event={'More about me'}
-        >
-          <Icon
-            className={'size-5'}
-            path={
-              'M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z'
-            }
-          />
-          <span>More about me</span>
-        </LinkButton>
         <SocialLinks />
       </div>
     </Section>

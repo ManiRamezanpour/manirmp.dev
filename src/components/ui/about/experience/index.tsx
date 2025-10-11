@@ -2,18 +2,28 @@ import eightsense from '@/assets/images/experience/8thsense_logo.jpeg';
 import minis from '@/assets/images/experience/minis.avif';
 import aval from '@/assets/images/experience/aval.jpg';
 import sampad from '@/assets/images/experience/sampad.jpeg';
+import pouyabash from '@/assets/images/experience/pouyabash.jpeg';
 import tourino from '@/assets/images/experience/tourio-logo.png';
 import { Icon } from '@/components/atoms/icon';
 import { LinkButton } from '@/components/atoms/link-button';
 import { Section } from '@/components/atoms/section';
 import { getColoredTextClasses } from '@/utils/colored-text';
-
+import mehrotech from '@/assets/images/experience/mehrotech.jpeg';
 import {
   ExpItem,
   type ExperienceItemProps as ExperienceRecord,
 } from './exp-item';
 
 const experience: Array<ExperienceRecord> = [
+  {
+    company: 'Pouyabash Co',
+    position: 'Software engineer (contract based)',
+    from: 'May 2025',
+    until: 'Jul 2025',
+    link: 'https://pouyabash.com/',
+    image: pouyabash,
+    color: '#4C4C59',
+  },
   {
     company: 'Association Manager (Volunteer working).',
     position: 'Team Manager, Software developer',
@@ -51,11 +61,20 @@ const experience: Array<ExperienceRecord> = [
   },
   {
     company: 'Aval co',
-    position: 'Web developer',
+    position: 'Freelancer Web developer',
     from: 'OCT 2022',
     until: 'NOV 2022',
     link: 'https://www.aval-co.de/',
     image: aval,
+    color: '#8FD554',
+  },
+  {
+    company: 'Mehrotech accelerator',
+    position: 'Front-end developer (Internship)',
+    from: 'Aug 2022',
+    until: 'Sep 2022',
+    link: 'https://www.linkedin.com/company/mehrotech-accelerator/',
+    image: mehrotech,
     last: true,
     color: '#8FD554',
   },

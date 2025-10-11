@@ -6,7 +6,7 @@ export const Meta = () => {
     <>
       <meta httpEquiv={'x-ua-compatible'} content={'ie=edge'} />
 
-      <link rel={'shortcut icon'} href={'/media/brand/favicon32.png'} />
+      <link rel={'shortcut icon'} href={'/media/brand/favicon.png'} />
       <link rel={'apple-touch-icon'} href={'/media/brand/favicon57.png'} />
       <link
         rel={'apple-touch-icon'}
@@ -20,12 +20,12 @@ export const Meta = () => {
       />
       <link
         rel={'apple-touch-icon-precomposed'}
-        href={'/media/brand/favicon32.png'}
+        href={'/media/brand/favicon.png'}
       />
-      <link rel={'icon'} sizes={'32x32'} href={'/media/brand/favicon32.png'} />
+      <link rel={'icon'} sizes={'32x32'} href={'/media/brand/favicon.png'} />
       <meta
         name={'msapplication-TileImage'}
-        content={'/media/brand/favicon32.png'}
+        content={'/media/brand/favicon.png'}
       />
 
       <link
