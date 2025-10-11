@@ -1,6 +1,5 @@
 import { Skills } from '@/components/ui/about/skills';
 import { Intro } from '@/components/ui/home';
-import { FeaturedVolunteering } from './featured-posts';
 
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -22,7 +21,7 @@ export default function HomePage() {
     <>
       <Intro />
       <Skills />
-      <FeaturedVolunteering />
+      {/* <FeaturedVolunteering /> */}
       <script type={'application/ld+json'} suppressHydrationWarning>
         {jsonLd}
       </script>
