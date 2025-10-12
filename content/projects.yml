@@ -68,7 +68,7 @@
 - order: 999999
   name: KioMars - telegram bot
   description: Just more projects...
-  icon: other/more.png
+  icon: /kiomars-bot.png
   url: https://github.com/ManiRamezanpour/
   color: '#92a3b5'
   hide: true
