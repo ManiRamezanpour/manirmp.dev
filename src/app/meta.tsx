@@ -28,13 +28,6 @@ export const Meta = () => {
         content={'/media/brand/favicon.png'}
       />
 
-      <link
-        rel={'alternate'}
-        href={'/feed.xml'}
-        type={'application/rss+xml'}
-        title={'Jahir Fiquitiva (RSS)'}
-      />
-
       {colorMetaTags.map((tag) => (
         <meta key={tag} name={tag} content={'transparent'} />
       ))}

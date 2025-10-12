@@ -55,8 +55,8 @@ export function generateMetadata(
   if (!repo) return undefined;
 
   return createMetadata({
-    title: `${repo} Release Download – Jahir Fiquitiva`,
+    title: `${repo} Release Download – Mani Ramezanpour`,
     description: `Download the latest release artifacts from the ${repo} repository on GitHub`,
-    exactUrl: `https://jahir.dev/gh-releases/${repo}`,
+    exactUrl: `https://manirmp.tech/gh-releases/${repo}`,
   });
 }

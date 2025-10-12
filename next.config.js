@@ -57,7 +57,7 @@ const defaultNextConfig = {
     remotePatterns: [
       { hostname: 'i.scdn.co' },
       { hostname: 'spotify.com' },
-      { hostname: 'jahir.dev' },
+      { hostname: 'manirmp.tech' },
       { hostname: 'unavatar.io' },
       { hostname: 'source.boringavatars.com' },
       { hostname: 'raw.githubusercontent.com' },

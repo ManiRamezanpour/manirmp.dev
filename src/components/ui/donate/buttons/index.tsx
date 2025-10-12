@@ -10,7 +10,7 @@ export const DonateButtons = () => {
       <div className={'flex flex-row items-center gap-4 flex-wrap'}>
         <GitHubSponsorsLink
           href={'https://github.com/sponsors/maniramezanpour'}
-          title={'Sponsor Jahir on GitHub'}
+          title={'Sponsor Mani on GitHub'}
           data-umami-event={'Donate'}
           data-umami-event-via={'GitHub Sponsors'}
         >
@@ -24,7 +24,7 @@ export const DonateButtons = () => {
         </GitHubSponsorsLink>
         <BuyMeACoffeeLink
           href={'https://buymeacoffee.com/manirmp'}
-          title={'Buy Jahir a Coffee'}
+          title={'Buy Mani a Coffee'}
           data-umami-event={'Donate'}
           data-umami-event-via={'Buy me a Coffee'}
         >

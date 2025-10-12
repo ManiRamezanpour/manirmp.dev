@@ -56,9 +56,9 @@ export default function RootLayout(props: PropsWithChildren) {
       <head>
         <Meta />
         <Script
-          src={'https://umami.jahir.dev/script.js'}
+          src={'https://manirmp.dev/script.js'}
           data-website-id={umamiWebsiteId}
-          data-domains={'jahir.dev'}
+          data-domains={'manirmp.tech'}
           strategy={'lazyOnload'}
         />
       </head>

@@ -13,7 +13,7 @@ export const UsesHero = () => (
     >
       <Img
         src={setupImage}
-        alt={"Jahir's desk setup in early 2023"}
+        alt={"Mani's desk setup in early 2023"}
         quality={100}
         priority
       />

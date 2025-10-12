@@ -5,8 +5,8 @@ const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Organization',
   image: '../../assets/photo.jpg',
-  url: 'https://jahir.dev',
-  sameAs: ['https://jahir.dev/about'],
+  url: 'https://manirmp.tech',
+  sameAs: ['https://manirmp.tech/about'],
   logo: '../../assets/photo.jpg',
   name: 'Mani Ramezanpour',
   description:

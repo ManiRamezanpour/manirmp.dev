@@ -29,12 +29,12 @@ const blogPostStructuredData = (post?: PartialBlog): string => {
     datePublished: date.toISOString(),
     dateModified: date.toISOString(),
     description: post.summary,
-    image: `https://jahir.dev/blog/${post.slug}/opengraph-image`,
-    url: `https://jahir.dev/blog/${post.slug}`,
+    image: `https://manirmp.tech/blog/${post.slug}/opengraph-image`,
+    url: `https://manirmp.tech/blog/${post.slug}`,
     author: {
       '@type': 'Person',
-      name: 'Jahir Fiquitiva',
-      url: 'https://jahir.dev/about',
+      name: 'Mani Ramezanpour',
+      url: 'https://manirmp.tech/about',
     },
   });
 };
@@ -77,7 +77,7 @@ export default function BlogPostPage(context: BlogPostPageContext) {
           <ShareButton title={'Share blog post'} slug={slug || ''} />
           <OutlinedLinkButton
             title={'Edit blog post'}
-            href={`https://github.com/jahirfiquitiva/jahir.dev/edit/main/content/${slug}.mdx`}
+            href={`https://github.com/maniramezanpour/manirmp.dev/edit/main/content/${slug}.mdx`}
             className={'pr-3.5'}
           >
             <Icon
@@ -114,9 +114,9 @@ export function generateMetadata(
 
   const { title, date, summary } = post;
   const metadata = createMetadata({
-    title: `${title} | Blog – Jahir Fiquitiva`,
-    description: summary || 'Blog post by Jahir Fiquitiva',
-    exactUrl: `https://jahir.dev/blog/${slug}`,
+    title: `${title} | Blog – Mani Ramezanpour`,
+    description: summary || 'Blog post by Mani Ramezanpour',
+    exactUrl: `https://manirmp.tech/blog/${slug}`,
     keywords: post.keywords,
   });
   return {

@@ -2,8 +2,8 @@
 const ContentSecurityPolicy = `
   default-src 'self' vercel.live;
   worker-src 'self' blob:;
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.jahir.dev;
-  child-src *.scdn.co *.spotify.com *.jahir.dev unavatar.now.sh *.unavatar.io;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.manirmp.tech;
+  child-src *.scdn.co *.spotify.com *.manirmp.tech unavatar.now.sh *.unavatar.io;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   object-src 'none';

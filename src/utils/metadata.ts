@@ -14,11 +14,11 @@ export const createMetadata = (data: {
     title,
     description,
     keywords,
-    authors: [{ name: 'Jahir Fiquitiva', url: 'https://jahir.dev' }],
+    authors: [{ name: 'Manirmp', url: 'https://manirmp.tech' }],
     openGraph: {
       title,
       description,
-      url: exactUrl || 'https://jahir.dev',
+      url: exactUrl || 'https://manirmp.tech',
       siteName: title,
       locale: 'en_US',
       type: 'website',
@@ -27,13 +27,13 @@ export const createMetadata = (data: {
       title,
       description,
       card: 'summary_large_image',
-      creator: '@jahirfiquitiva',
-      site: '@jahirfiquitiva',
+      creator: '@manirmps',
+      site: '@manirmps',
     },
     verification: {
       google: 'lJwL3cKpjX_Eqp6yEY4hsydJazQl85xv29ZUmEg4oEE',
     },
-    metadataBase: new URL('https://jahir.dev'),
+    metadataBase: new URL('https://manirmp.tech'),
   };
   if (imageURL && Boolean(imageURL)) {
     const image = {

@@ -44,7 +44,7 @@ export default function DonatePage() {
           <ListItem>
             Early and free access to future projects and{' '}
             <Link
-              title={'Sponsor Jahir Fiquitiva on GitHub'}
+              title={'Sponsor Mani Ramezanpour on GitHub'}
               href={'https://github.com/sponsors/ManiRamezanpour/'}
             >
               more
@@ -73,7 +73,7 @@ export default function DonatePage() {
 }
 
 export const metadata = createMetadata({
-  title: 'Donate – Jahir Fiquitiva',
+  title: 'Donate – Mani Ramezanpour',
   description:
     // eslint-disable-next-line max-len
     'Support Mani. Donate or sponsor him as a recognition for his work on different projects.',

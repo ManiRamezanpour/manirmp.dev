@@ -4,5 +4,5 @@ Disallow: /static/fonts/
 Disallow: /static/js/
 Disallow: /frames/
 Disallow: /share/
-Sitemap: https://jahir.dev/sitemap.xml
-Host: https://jahir.dev
+Sitemap: https://manirmp.tech/sitemap.xml
+Host: https://manirmp.tech

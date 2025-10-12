@@ -18,11 +18,11 @@ export default function BlogPage() {
 }
 
 export const metadata = createMetadata({
-  title: 'Blog – Jahir Fiquitiva',
+  title: 'Blog – Mani Ramezanpour',
   description:
     // eslint-disable-next-line max-len
-    'Blog posts by Jahir Fiquitiva. Here I share some thoughts, stories, information and more about software development, programming, tech or my personal life',
-  exactUrl: 'https://jahir.dev/blog',
+    'Blog posts by Mani Ramezanpour. Here I share some thoughts, stories, information and more about software development, programming, tech or my personal life',
+  exactUrl: 'https://manirmp.tech/blog',
   keywords: [
     'tech',
     'software',

@@ -24,7 +24,7 @@ const jsonLd = JSON.stringify({
       'https://github.com/Maniramezanpour',
       'https://linkedin.com/in/mani-ramezanpour',
       'https://twitter.com/manirmps',
-      'https://instagram.com/jahirfiquitiva',
+      'https://instagram.com/manirmps',
     ],
   },
 });

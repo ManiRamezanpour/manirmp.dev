@@ -13,16 +13,16 @@ export const getRepoReleaseData = async (name?: string) => {
   noStore();
   try {
     const dataRequest = await fetch(
-      `https://api.github.com/repos/jahirfiquitiva/${name}/releases/latest`,
+      `https://api.github.com/repos/maniramezanpour/${name}/releases/latest`,
       authHeaders,
     );
     const data = await dataRequest.json();
     const { assets = [] } = data;
     const extraRepoData = {
       success: false,
-      url: `https://github.com/jahirfiquitiva/${name}`,
+      url: `https://github.com/maniramezanpour/${name}`,
     };
-    const defaultDownloadLink = `https://github.com/jahirfiquitiva/${name}/releases/latest/`;
+    const defaultDownloadLink = `https://github.com/maniramezanpour/${name}/releases/latest/`;
     let downloadLink = defaultDownloadLink;
     if (assets) {
       const [apk] = assets;

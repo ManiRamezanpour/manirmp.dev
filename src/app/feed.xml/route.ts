@@ -12,7 +12,7 @@ export const dynamic = 'force-static';
 
 const formatImageUrl = (url?: string) => {
   if (!url) return '';
-  if (url.startsWith('/')) return `https://jahir.dev${url}`;
+  if (url.startsWith('/')) return `https://manirmp.tech${url}`;
   return url;
 };
 
@@ -23,7 +23,7 @@ const buildDescriptionHtml = (post: PartialBlog): string => {
   if (post.link)
     description += `<b><a href="${post.link}">Read more...</a></b><br/><br/>`;
   else
-    description += `<b><a href="https://jahir.dev/blog/${post.slug}">Read more...</a></b><br/><br/>`;
+    description += `<b><a href="https://manirmp.tech/blog/${post.slug}">Read more...</a></b><br/><br/>`;
 
   if (post.hero) {
     description += `<p><img src="${formatImageUrl(post.hero)}" `;
@@ -36,7 +36,7 @@ const getAllPostRssData = (post: PartialBlog) => {
   const descriptionHtml = buildDescriptionHtml(post);
   return {
     title: post.title,
-    url: post.link || `https://jahir.dev/blog/${post.slug}`,
+    url: post.link || `https://manirmp.tech/blog/${post.slug}`,
     date: post.date,
     description: post.summary,
     html: descriptionHtml,
@@ -106,24 +106,24 @@ const buildFeed = (posts: Array<ReturnType<typeof getAllPostRssData>>) => {
 const defaultChannel = {
   'atom:link': {
     _attr: {
-      href: 'https://jahir.dev/feed.xml',
+      href: 'https://manirmp.tech/feed.xml',
       rel: 'self',
       type: 'application/rss+xml',
     },
   },
   lastBuildDate: new Date().toUTCString(),
   language: 'en-US',
-  link: 'https://jahir.dev',
-  title: 'Jahir Fiquitiva',
+  link: 'https://manirmp.tech',
+  title: 'Mani Ramezanpour',
   description:
     'Passionate and creative full-stack software engineer from Colombia',
-  image_url: 'https://jahir.dev/api/og',
+  image_url: 'https://manirmp.tech/api/og',
   image: {
-    title: 'Jahir Fiquitiva',
-    link: 'https://jahir.dev',
-    url: 'https://jahir.dev/api/og',
+    title: 'Mani Ramezanpour',
+    link: 'https://manirmp.tech',
+    url: 'https://manirmp.tech/api/og',
   },
-  copyright: `All rights reserved ${new Date().getFullYear()}, Jahir Fiquitiva`,
+  copyright: `All rights reserved ${new Date().getFullYear()}, Mani Ramezanpour`,
 };
 
 export async function GET() {
