@@ -77,7 +77,7 @@ export const Experience = () => {
         <h2 className={getColoredTextClasses('brand')}>Experience</h2>
         <LinkButton
           title={'Resume'}
-          href={'/resume'}
+          href={'https://flowcv.com/resume/d75rwqwcqf'}
           openInNewTab
           className={'self-start pr-3.5'}
           data-umami-event={'Resume'}
