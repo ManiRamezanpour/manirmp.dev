@@ -1,6 +1,5 @@
 import eightsense from '@/assets/images/experience/8thsense_logo.jpeg';
 import minis from '@/assets/images/experience/minis.avif';
-import aval from '@/assets/images/experience/aval.jpg';
 import sampad from '@/assets/images/experience/sampad.jpeg';
 import pouyabash from '@/assets/images/experience/pouyabash.jpeg';
 import tourino from '@/assets/images/experience/tourio-logo.png';
@@ -58,15 +57,6 @@ const experience: Array<ExperienceRecord> = [
     link: 'https://www.minis.dev/',
     image: minis,
     color: '#4AA1D1',
-  },
-  {
-    company: 'Aval co',
-    position: 'Freelancer Web developer',
-    from: 'OCT 2022',
-    until: 'NOV 2022',
-    link: 'https://www.aval-co.de/',
-    image: aval,
-    color: '#8FD554',
   },
   {
     company: 'Mehrotech accelerator',
