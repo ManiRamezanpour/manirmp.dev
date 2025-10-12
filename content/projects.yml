@@ -76,7 +76,7 @@
 - order: 11
   name: Snake Game
   description: snake game with pure html and css
-  icon: other/puzzle.png
+  icon: /snake.png
   # preview: other/sliding-puzzle-preview.png
   url: https://github.com/ManiRamezanpour/Snake-Game
   color: '#929292'
@@ -86,7 +86,7 @@
 - order: 12
   name: TikTok Toe
   description: Tic Tac Toe game with tiktok theme
-  icon: other/puzzle.png
+  icon: /tik-tok-toe.png
   url: https://github.com/ManiRamezanpour/TikTok-Toe
   color: '#FC8303'
   hide: true

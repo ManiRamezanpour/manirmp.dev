@@ -26,7 +26,7 @@ export const createMetadata = (data: {
     twitter: {
       title,
       description,
-      card: 'summary_large_image',
+      // card: 'summary_large_image',
       creator: '@manirmps',
       site: '@manirmps',
     },
@@ -37,7 +37,7 @@ export const createMetadata = (data: {
   };
   if (imageURL && Boolean(imageURL)) {
     const image = {
-      url: imageURL,
+      url: '/brand/icon.png',
       type: config.contentType,
       width: config.size.width,
       height: config.size.height,

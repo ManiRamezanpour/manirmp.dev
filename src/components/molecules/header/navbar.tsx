@@ -15,6 +15,7 @@ import {
   NavPageLinkText,
 } from './navbar.styles';
 import ThemeToggle from './theme-toggle';
+import { Logo } from '@/components/atoms/logo';
 
 const toolbarLinksList = [
   {
@@ -50,7 +51,7 @@ export const Navbar = (props: NavbarProps) => {
         className={'gap-2 hocus:bg-toolbar-highlight'}
         aria-current={props.path === '/' ? 'page' : undefined}
       >
-        {/* <Logo className={'saturate-125 dark:saturate-150'} /> */}
+        <Logo className={'saturate-125 dark:saturate-150'} />
         <span
           className={
             'text-xl font-bold text-accent saturate-125 dark:saturate-150'

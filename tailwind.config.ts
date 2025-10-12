@@ -112,7 +112,7 @@ const config: Config = {
           700: '#f472b6', // hot pink
           600: '#f9a8d4', // soft pink
           500: '#CC404E', // bright yellow
-          400: '##004FB0', // soft yellow
+          400: '#004FB0', // soft yellow
           300: '#34d399', // mint green
           200: '#6ee7b7', // light green
           100: '#93c5fd', // sky blue
