@@ -14,7 +14,7 @@ export interface ExperienceItemProps {
   until?: string;
   link: string;
   color: string;
-  image: ImageProps['src'];
+  image?: ImageProps['src'];
   last?: boolean;
 }
 
@@ -30,14 +30,27 @@ export const ExpItem = (props: ExperienceItemProps) => {
       data-umami-event={'Experience'}
       data-umami-event-company={props.company}
     >
-      <Img
-        src={props.image}
-        alt={props.company}
-        className={cx(
-          'size-12 rounded-1.5',
-          'border border-divider select-none',
-        )}
-      />
+      {props.image ? (
+        <Img
+          src={props.image}
+          alt={props.company}
+          className={cx(
+            'size-12 rounded-1.5',
+            'border border-divider select-none',
+          )}
+        />
+      ) : (
+        <span
+          aria-hidden={'true'}
+          className={cx(
+            'size-12 shrink-0 rounded-1.5 flex items-center justify-center',
+            'border border-tint-border bg-tint-bg select-none',
+            'font-manrope font-bold text-md text-primary-txt',
+          )}
+        >
+          {props.company.charAt(0)}
+        </span>
+      )}
       <div className={'flex flex-col flex-1'}>
         <p className={'tabular-nums line-clamp-1 text-3xs text-tertiary-txt'}>
           <span>{props.from}</span> – <span>{props.until || 'Present'}</span>
