@@ -1,19 +1,35 @@
 import eightsense from '@/assets/images/experience/8thsense_logo.jpeg';
+import mehrotech from '@/assets/images/experience/mehrotech.jpeg';
 import minis from '@/assets/images/experience/minis.avif';
-import sampad from '@/assets/images/experience/sampad.jpeg';
 import pouyabash from '@/assets/images/experience/pouyabash.jpeg';
+import sampad from '@/assets/images/experience/sampad.jpeg';
 import tourino from '@/assets/images/experience/tourio-logo.png';
 import { Icon } from '@/components/atoms/icon';
-import { LinkButton } from '@/components/atoms/link-button';
+import { LinkButton, OutlinedLinkButton } from '@/components/atoms/link-button';
 import { Section } from '@/components/atoms/section';
 import { getColoredTextClasses } from '@/utils/colored-text';
-import mehrotech from '@/assets/images/experience/mehrotech.jpeg';
+
 import {
   ExpItem,
   type ExperienceItemProps as ExperienceRecord,
 } from './exp-item';
 
 const experience: Array<ExperienceRecord> = [
+  {
+    company: 'Sportmonks',
+    position: 'Backend developer (Internship)',
+    from: 'Oct 2025',
+    link: 'https://www.sportmonks.com/',
+    color: '#1BB566',
+  },
+  {
+    company: 'QuickSports',
+    position: 'Software engineer (Internship)',
+    from: 'Aug 2025',
+    until: 'Oct 2025',
+    link: 'https://www.linkedin.com/search/results/companies/?keywords=quicksports',
+    color: '#356AC4',
+  },
   {
     company: 'Pouyabash Co',
     position: 'Software engineer (contract based)',
@@ -65,38 +81,63 @@ const experience: Array<ExperienceRecord> = [
     until: 'Sep 2022',
     link: 'https://www.linkedin.com/company/mehrotech-accelerator/',
     image: mehrotech,
-    last: true,
     color: '#8FD554',
   },
 ];
 
-export const Experience = () => {
+export const RESUME_URL = 'https://flowcv.com/resume/d75rwqwcqf';
+
+interface ExperienceProps {
+  featured?: boolean;
+}
+
+const FEATURED_COUNT = 3;
+
+export const Experience = ({ featured }: ExperienceProps) => {
+  const items = featured ? experience.slice(0, FEATURED_COUNT) : experience;
   return (
     <Section id={'experience'} className={'gap-6'}>
       <div className={'flex flex-row gap-4 items-center justify-between'}>
         <h2 className={getColoredTextClasses('brand')}>Experience</h2>
-        <LinkButton
-          title={'Resume'}
-          href={'https://flowcv.com/resume/d75rwqwcqf'}
-          openInNewTab
-          className={'self-start pr-3.5'}
-          data-umami-event={'Resume'}
-        >
-          <Icon
-            className={'size-5'}
-            path={
-              // eslint-disable-next-line max-len
-              'm20.7 6.8-5.5-5.5c-.2-.2-.4-.3-.7-.3H6C4.3 1 3 2.3 3 4v16c0 1.7 1.3 3 3 3h12c1.7 0 3-1.3 3-3V7.5c0-.3-.1-.5-.3-.7zm-2.6.2H15V3.9L18.1 7zM18 21H6c-.6 0-1-.4-1-1V4c0-.6.4-1 1-1h7v5c0 .6.4 1 1 1h5v11c0 .6-.4 1-1 1zm-1-8c0 .6-.4 1-1 1H8c-.6 0-1-.4-1-1s.4-1 1-1h8c.6 0 1 .4 1 1zm0 4c0 .6-.4 1-1 1H8c-.6 0-1-.4-1-1s.4-1 1-1h8c.6 0 1 .4 1 1zM7 9c0-.6.4-1 1-1h2c.6 0 1 .4 1 1s-.4 1-1 1H8c-.6 0-1-.4-1-1z'
-            }
-          />
-          <span>Resume</span>
-        </LinkButton>
+        {featured ? (
+          <OutlinedLinkButton
+            title={'Full history'}
+            href={'/about#experience'}
+            className={'self-start pr-3.5'}
+            data-umami-event={'View full experience'}
+          >
+            <Icon
+              className={'size-5'}
+              path={
+                'M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z'
+              }
+            />
+            <span>Full history</span>
+          </OutlinedLinkButton>
+        ) : (
+          <LinkButton
+            title={'Resume'}
+            href={RESUME_URL}
+            openInNewTab
+            className={'self-start pr-3.5'}
+            data-umami-event={'Resume'}
+          >
+            <Icon
+              className={'size-5'}
+              path={
+                // eslint-disable-next-line max-len
+                'm20.7 6.8-5.5-5.5c-.2-.2-.4-.3-.7-.3H6C4.3 1 3 2.3 3 4v16c0 1.7 1.3 3 3 3h12c1.7 0 3-1.3 3-3V7.5c0-.3-.1-.5-.3-.7zm-2.6.2H15V3.9L18.1 7zM18 21H6c-.6 0-1-.4-1-1V4c0-.6.4-1 1-1h7v5c0 .6.4 1 1 1h5v11c0 .6-.4 1-1 1zm-1-8c0 .6-.4 1-1 1H8c-.6 0-1-.4-1-1s.4-1 1-1h8c.6 0 1 .4 1 1zm0 4c0 .6-.4 1-1 1H8c-.6 0-1-.4-1-1s.4-1 1-1h8c.6 0 1 .4 1 1zM7 9c0-.6.4-1 1-1h2c.6 0 1 .4 1 1s-.4 1-1 1H8c-.6 0-1-.4-1-1z'
+              }
+            />
+            <span>Resume</span>
+          </LinkButton>
+        )}
       </div>
       <ol className={'flex flex-col gap-1.5'}>
-        {experience.map((exp) => {
+        {items.map((exp, index) => {
           return (
             <li key={exp.company}>
-              <ExpItem {...exp} />
+              <ExpItem {...exp} last={index === items.length - 1} />
             </li>
           );
         })}

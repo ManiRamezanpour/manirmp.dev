@@ -1,25 +1,33 @@
+import { Experience } from '@/components/ui/about/experience';
 import { Skills } from '@/components/ui/about/skills';
 import { Intro } from '@/components/ui/home';
+import { ProjectsList } from '@/components/ui/projects';
 
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  image: '../../assets/photo.jpg',
-  url: 'https://manirmp.tech',
-  sameAs: ['https://manirmp.tech/about'],
-  logo: '../../assets/photo.jpg',
+  '@type': 'Person',
   name: 'Mani Ramezanpour',
+  url: 'https://manirmp.tech',
+  image: 'https://manirmp.tech/opengraph-image',
+  jobTitle: 'Software Engineer',
+  worksFor: { '@type': 'Organization', name: 'Sportmonks' },
   description:
     // eslint-disable-next-line max-len
-    'A full-stack JS/TS Developer with 3 years of hands-on experience in creating high-performance web applications.',
-  email: 'maniramznpoort',
-  foundingDate: new Date('1997-01-28T18:30:00-05:00').toISOString(),
+    'A full-stack software engineer with 4+ years of hands-on experience in creating high-performance and scalable web applications.',
+  sameAs: [
+    'https://github.com/maniramezanpour',
+    'https://linkedin.com/in/mani-ramezanpour',
+    'https://twitter.com/manirmps',
+    'https://instagram.com/manirmps',
+  ],
 });
 
 export default function HomePage() {
   return (
     <>
       <Intro />
+      <ProjectsList title={'Featured projects'} featuredOnly />
+      <Experience featured />
       <Skills />
       <script type={'application/ld+json'} suppressHydrationWarning>
         {jsonLd}

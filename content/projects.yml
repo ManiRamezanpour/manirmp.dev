@@ -1,4 +1,28 @@
 - order: 0
+  name: NutriNest
+  description: Cross-platform app for tracking nutrition and planning healthy meals, on iOS, Android and the web
+  icon: /nutrinest.png
+  url: https://github.com/maniramezanpour
+  color: '#16a34a'
+
+- order: 0
+  name: ShapeFormer – Hardware
+  description: Arduino firmware for a University of Twente shape former, reading a load cell and temperature sensor and driving a stepper motor
+  icon: /shapeformer-hardware.png
+  url: https://github.com/ManiRamezanpour/shape-former
+  color: '#ea580c'
+  repo: shape-former
+
+- order: 0
+  name: ShapeFormer – Software
+  description: Python/Flask web controller that runs on a Raspberry Pi and starts and stops ShapeFormer cycles on the Arduino over serial
+  icon: /shapeformer-web.png
+  url: https://shape-former-web-ui.vercel.app
+  color: '#0f766e'
+  darkColor: '#2dd4bf'
+  repo: Shape-former-web-ui
+
+- order: 0
   name: GoshneYad Telegram bot
   description: Telegram bot to remoind you to eat healthy food and reserve university meals
   icon: /unibot.jpg
