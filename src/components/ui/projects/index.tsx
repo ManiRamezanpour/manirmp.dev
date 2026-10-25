@@ -1,6 +1,7 @@
 import { Icon } from '@/components/atoms/icon';
 import { LinkButton } from '@/components/atoms/link-button';
 import { Section } from '@/components/atoms/section';
+import { StaggerItem, StaggerList } from '@/components/motion/reveal';
 import { projects as allProjects } from '@/content';
 import { getColoredTextClasses } from '@/utils/colored-text';
 import cx from '@/utils/cx';
@@ -50,13 +51,13 @@ export const ProjectsList = (props: ProjectsListProps) => {
           </LinkButton>
         ) : null}
       </div>
-      <ul>
+      <StaggerList>
         {filteredProjects.map((project) => (
-          <li key={project.name}>
+          <StaggerItem key={project.name}>
             <ProjectItem project={project} />
-          </li>
+          </StaggerItem>
         ))}
-      </ul>
+      </StaggerList>
     </Section>
   );
 };

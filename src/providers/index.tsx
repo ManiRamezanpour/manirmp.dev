@@ -1,5 +1,6 @@
 'use client';
 
+import { MotionConfig } from 'framer-motion';
 import { ThemeProvider as NextThemeProvider } from 'next-themes';
 import { type PropsWithChildren } from 'react';
 
@@ -13,7 +14,9 @@ export function Providers(props: PropsWithChildren) {
       enableColorScheme
       disableTransitionOnChange
     >
-      <ThemeProvider>{props.children}</ThemeProvider>
+      <ThemeProvider>
+        <MotionConfig reducedMotion={'user'}>{props.children}</MotionConfig>
+      </ThemeProvider>
     </NextThemeProvider>
   );
 }

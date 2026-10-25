@@ -5,14 +5,20 @@ import { Link } from '@/components/atoms/link';
 import { LinkButton, OutlinedLinkButton } from '@/components/atoms/link-button';
 import { Section } from '@/components/atoms/section';
 import { SocialLinks } from '@/components/molecules/social-links';
+import { Magnetic } from '@/components/motion/magnetic';
+import { Reveal } from '@/components/motion/reveal';
+import { ScrambleText } from '@/components/motion/scramble-text';
 import { RESUME_URL } from '@/components/ui/about/experience';
 import { CONTACT_EMAIL } from '@/constants';
 import cx from '@/utils/cx';
 
+import { FlowField } from './flow-field';
+
 export const Intro = () => {
   return (
     <Section id={'intro'} className={'gap-8'}>
-      <div className={'flex flex-col gap-5'}>
+      <FlowField />
+      <Reveal className={'flex flex-col gap-5'}>
         <div className={'flex flex-row items-center gap-4'}>
           <Img
             src={photo}
@@ -58,7 +64,7 @@ export const Intro = () => {
             'text-[2.25rem] tablet-sm:text-[3rem] leading-tight tracking-tight',
           )}
         >
-          Mani Ramezanpour
+          <ScrambleText text={'Mani Ramezanpour'} />
         </h1>
 
         <div className={'flex flex-col gap-3 max-w-nice'}>
@@ -85,49 +91,54 @@ export const Intro = () => {
             problem.
           </p>
         </div>
-      </div>
+      </Reveal>
 
-      <div
+      <Reveal
+        delay={0.15}
         className={cx(
           'flex flex-col gap-4',
           'tablet-sm:flex-row tablet-sm:items-center tablet-sm:justify-between',
         )}
       >
         <div className={'flex flex-row flex-wrap gap-3'}>
-          <LinkButton
-            title={'Resume'}
-            href={RESUME_URL}
-            openInNewTab
-            className={'pr-3.5'}
-            data-umami-event={'Resume'}
-          >
-            <Icon
-              className={'size-5'}
-              path={
-                // eslint-disable-next-line max-len
-                'M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M10,19L12,15H9V10H15V15L13,19H10Z'
-              }
-            />
-            <span>Resume</span>
-          </LinkButton>
-          <OutlinedLinkButton
-            title={'Get in touch'}
-            href={`mailto:${CONTACT_EMAIL}?subject=Hi%20Mani!`}
-            className={'pr-3.5'}
-            data-umami-event={'Get in touch'}
-          >
-            <Icon
-              className={'size-5'}
-              path={
-                // eslint-disable-next-line max-len
-                'm20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z'
-              }
-            />
-            <span>Get in touch</span>
-          </OutlinedLinkButton>
+          <Magnetic>
+            <LinkButton
+              title={'Resume'}
+              href={RESUME_URL}
+              openInNewTab
+              className={'pr-3.5'}
+              data-umami-event={'Resume'}
+            >
+              <Icon
+                className={'size-5'}
+                path={
+                  // eslint-disable-next-line max-len
+                  'M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M10,19L12,15H9V10H15V15L13,19H10Z'
+                }
+              />
+              <span>Resume</span>
+            </LinkButton>
+          </Magnetic>
+          <Magnetic>
+            <OutlinedLinkButton
+              title={'Get in touch'}
+              href={`mailto:${CONTACT_EMAIL}?subject=Hi%20Mani!`}
+              className={'pr-3.5'}
+              data-umami-event={'Get in touch'}
+            >
+              <Icon
+                className={'size-5'}
+                path={
+                  // eslint-disable-next-line max-len
+                  'm20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z'
+                }
+              />
+              <span>Get in touch</span>
+            </OutlinedLinkButton>
+          </Magnetic>
         </div>
         <SocialLinks className={'justify-start gap-1 -ml-2'} />
-      </div>
+      </Reveal>
     </Section>
   );
 };
