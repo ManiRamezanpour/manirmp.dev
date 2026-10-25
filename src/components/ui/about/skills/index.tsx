@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react';
 
 import { Icon } from '@/components/atoms/icon';
 import { Section } from '@/components/atoms/section';
+import { StaggerItem, StaggerList } from '@/components/motion/reveal';
 import { hexToRgb } from '@/utils/color';
 import { getColoredTextClasses } from '@/utils/colored-text';
 import cx from '@/utils/cx';
@@ -34,31 +35,34 @@ export const Skills = () => {
               >
                 {category}
               </dt>
-              <dd className={'flex flex-wrap gap-2'}>
-                {items.map((skill) => (
-                  <span
-                    key={skill.name}
-                    style={
-                      {
-                        '--tint': hexToRgb(skill.color, 1, true),
-                      } as CSSProperties
-                    }
-                    className={cx(
-                      'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-2',
-                      'text-2xs font-medium text-secondary-txt',
-                      'border border-divider bg-transparent',
-                      'transition-colors hocus:bg-tint-bg hocus:border-tint-border',
-                      'hocus:text-primary-txt',
-                    )}
-                  >
-                    <Icon
-                      path={skill.icon}
-                      className={'size-4'}
-                      style={{ color: skill.color }}
-                    />
-                    {skill.name}
-                  </span>
-                ))}
+              <dd>
+                <StaggerList as={'div'} className={'flex flex-wrap gap-2'}>
+                  {items.map((skill) => (
+                    <StaggerItem key={skill.name} as={'span'}>
+                      <span
+                        style={
+                          {
+                            '--tint': hexToRgb(skill.color, 1, true),
+                          } as CSSProperties
+                        }
+                        className={cx(
+                          'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-2',
+                          'text-2xs font-medium text-secondary-txt',
+                          'border border-divider bg-transparent',
+                          'transition-colors hocus:bg-tint-bg hocus:border-tint-border',
+                          'hocus:text-primary-txt',
+                        )}
+                      >
+                        <Icon
+                          path={skill.icon}
+                          className={'size-4'}
+                          style={{ color: skill.color }}
+                        />
+                        {skill.name}
+                      </span>
+                    </StaggerItem>
+                  ))}
+                </StaggerList>
               </dd>
             </div>
           );

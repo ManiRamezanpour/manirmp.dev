@@ -5,7 +5,7 @@ import { Img } from '@/components/atoms/img';
 import { hexToRgb } from '@/utils/color';
 import cx from '@/utils/cx';
 
-import { ExperienceItem, ExperienceItemWithLine } from './exp.styles';
+import { ExperienceItem } from './exp.styles';
 
 export interface ExperienceItemProps {
   company: string;
@@ -15,14 +15,12 @@ export interface ExperienceItemProps {
   link: string;
   color: string;
   image?: ImageProps['src'];
-  last?: boolean;
 }
 
 export const ExpItem = (props: ExperienceItemProps) => {
   const color = hexToRgb(props.color, 1, true);
-  const Component = props.last ? ExperienceItem : ExperienceItemWithLine;
   return (
-    <Component
+    <ExperienceItem
       title={`${props.position} at ${props.company}`}
       href={props.link}
       target={'_blank'}
@@ -30,28 +28,41 @@ export const ExpItem = (props: ExperienceItemProps) => {
       data-umami-event={'Experience'}
       data-umami-event-company={props.company}
     >
-      {props.image ? (
-        <Img
-          src={props.image}
-          alt={props.company}
-          className={cx(
-            'size-12 rounded-1.5',
-            'border border-divider select-none',
-          )}
-        />
-      ) : (
+      <span
+        data-exp-node
+        className={'relative z-1 shrink-0 rounded-1.5 bg-background'}
+      >
         <span
+          data-exp-glow
           aria-hidden={'true'}
           className={cx(
-            'size-12 shrink-0 rounded-1.5 flex items-center justify-center',
-            'border border-tint-border bg-tint-bg select-none',
-            'font-manrope font-bold text-md text-primary-txt',
+            'absolute -inset-1 rounded-2.5 pointer-events-none',
+            'ring-2 ring-tint-border shadow-[0_0_16px_rgba(var(--tint)/0.35)]',
           )}
-        >
-          {props.company.charAt(0)}
-        </span>
-      )}
-      <div className={'flex flex-col flex-1'}>
+        />
+        {props.image ? (
+          <Img
+            src={props.image}
+            alt={props.company}
+            className={cx(
+              'size-12 rounded-1.5',
+              'border border-divider select-none',
+            )}
+          />
+        ) : (
+          <span
+            aria-hidden={'true'}
+            className={cx(
+              'size-12 shrink-0 rounded-1.5 flex items-center justify-center',
+              'border border-tint-border bg-tint-bg select-none',
+              'font-manrope font-bold text-md text-primary-txt',
+            )}
+          >
+            {props.company.charAt(0)}
+          </span>
+        )}
+      </span>
+      <div data-exp-content className={'flex flex-col flex-1'}>
         <p className={'tabular-nums line-clamp-1 text-3xs text-tertiary-txt'}>
           <span>{props.from}</span> – <span>{props.until || 'Present'}</span>
         </p>
@@ -67,6 +78,6 @@ export const ExpItem = (props: ExperienceItemProps) => {
           {props.position}
         </p>
       </div>
-    </Component>
+    </ExperienceItem>
   );
 };

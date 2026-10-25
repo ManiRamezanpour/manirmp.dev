@@ -1,32 +1,34 @@
+import { Icon } from '@/components/atoms/icon';
 import { tw } from '@/utils/cx';
 
-export const ThemeToggleContainer = tw.div`
+export const ThemeToggleButton = tw.button`
+  relative
   flex
   items-center
   justify-center
-  min-h-11
-  min-w-11
   size-11
-  p-2
-  rounded-1.5
+  rounded-full
+  text-secondary-txt
   transition
-  text-accent
-  relative
-  hocus:text-accent-dark
-`;
-
-export const ThemeSelect = tw.select`
-  size-11
-  rounded-1.5
-  bg-transparent
+  duration-200
   hocus:bg-toolbar-highlight
-  appearance-none
-  text-transparent
+  hocus:text-primary-txt
+  active:scale-95
+  group/theme
 `;
 
-export const ThemeIconContainer = tw.div`
-  absolute
-  top-0 left-0 right-0 bottom-0
-  flex items-center justify-center
-  pointer-events-none select-none
+export const ThemeIconContainer = tw.span`
+  relative
+  grid
+  place-items-center
+  size-5.5
+  [&>*]:[grid-area:1/1]
+`;
+
+export const ThemeIcon = tw(Icon)`
+  size-5.5
+  transition-[transform,opacity]
+  duration-500
+  ease-[cubic-bezier(0.22,1,0.36,1)]
+  group-hover/theme:rotate-12
 `;

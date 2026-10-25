@@ -1,7 +1,7 @@
 import { Experience } from '@/components/ui/about/experience';
 import { Skills } from '@/components/ui/about/skills';
 import { Intro } from '@/components/ui/home';
-import { ProjectsList } from '@/components/ui/projects';
+import { FeaturedProjects } from '@/components/ui/projects/featured';
 
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -26,7 +26,7 @@ export default function HomePage() {
   return (
     <>
       <Intro />
-      <ProjectsList title={'Featured projects'} featuredOnly />
+      <FeaturedProjects />
       <Experience featured />
       <Skills />
       <script type={'application/ld+json'} suppressHydrationWarning>

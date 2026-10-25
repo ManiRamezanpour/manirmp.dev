@@ -14,14 +14,3 @@ export const ExperienceItem = tw(Link)`
   transition-colors
   hocus:bg-tint-bg
 `;
-
-export const ExperienceItemWithLine = tw(ExperienceItem)`
-  before:absolute 
-  before:w-px 
-  before:bg-divider
-  before:h-full 
-  before:top-[3.625rem] 
-  before:mobile-lg:top-[3.75rem]
-  before:left-[2.125rem]
-  before:mobile-lg:left-[2.25rem]
-`;

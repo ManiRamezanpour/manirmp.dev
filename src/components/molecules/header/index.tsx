@@ -13,7 +13,7 @@ export const Header = () => {
       <Navbar
         path={pathname}
         expanded={expanded}
-        className={elevated ? 'shadow-toolbar-elevated' : ''}
+        elevated={elevated}
         onNavToggleClick={() => {
           setExpanded(!expanded);
         }}

@@ -4,11 +4,9 @@ export const StyledHeader = tw.header`
   fixed top-0 h-full
   w-screen z-3
   left-0 right-0
-  bg-gradient-to-b from-light to-light/10
-  dark:from-dark dark:to-dark/10
+  bg-gradient-to-b from-light via-light/70 to-transparent
+  dark:from-dark dark:via-dark/70
   p-3
-  bg-blend-hard-light
-  backdrop-blur
   transform-gpu
   transition-[max-height]
   duration-300
@@ -18,6 +16,7 @@ export const StyledHeader = tw.header`
 export const expandedClasses = cx(
   'tablet-sm:h-[unset]',
   'max-tablet-sm:max-h-full',
-  'max-tablet-sm:to-light/50',
-  'max-tablet-sm:dark:to-dark/50',
+  'max-tablet-sm:bg-light/60',
+  'max-tablet-sm:dark:bg-dark/60',
+  'max-tablet-sm:backdrop-blur-sm',
 );
