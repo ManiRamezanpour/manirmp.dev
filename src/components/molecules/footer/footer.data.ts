@@ -1,3 +1,5 @@
+import { CONTACT_EMAIL } from '@/constants';
+
 export const linksGroups = [
   {
     title: 'Navigate',
@@ -6,17 +8,14 @@ export const linksGroups = [
       {
         title: 'Home',
         href: '/',
-        className: 'text-brand',
       },
       {
         title: 'About',
         href: '/about',
-        className: 'text-green',
       },
       {
         title: 'Projects',
         href: '/projects',
-        className: 'text-purple',
       },
     ],
   },
@@ -27,21 +26,15 @@ export const linksGroups = [
       {
         title: 'Donate',
         href: '/donate',
-        className: 'text-yellow',
       },
       {
         title: 'Contact',
-        href: '/contact',
-        className: 'text-green',
+        a11yTitle: 'Send me an email',
+        href: `mailto:${CONTACT_EMAIL}`,
         props: {
           ignoreNextLink: true,
+          openInNewTab: false,
         },
-      },
-      {
-        title: 'Back to Top',
-        a11yTitle: 'Scroll back to top',
-        href: '#page',
-        className: 'text-brand',
       },
     ],
   },

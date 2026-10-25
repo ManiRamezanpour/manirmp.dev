@@ -7,7 +7,7 @@ const NavToggleButton = tw.button`
   min-h-11
   min-w-11
   p-2
-  rounded-1.5
+  rounded-full
   transition
   hocus:bg-toolbar-highlight
   group/nav-toggle
@@ -21,9 +21,11 @@ const NavToggleButton = tw.button`
 const MenuLine = tw.span.attrs({ 'aria-hidden': true })`
   w-[1.125rem]
   h-0.5
-  bg-accent
+  rounded-full
+  bg-secondary-txt
   transition
-  group-hocus/nav-toggle:bg-accent-dark
+  duration-300
+  group-hocus/nav-toggle:bg-primary-txt
 `;
 
 export const NavToggle = (props: TWComponentProps<typeof NavToggleButton>) => {
