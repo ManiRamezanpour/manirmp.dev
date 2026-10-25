@@ -3,6 +3,7 @@ import mehrotech from '@/assets/images/experience/mehrotech.jpeg';
 import minis from '@/assets/images/experience/minis.avif';
 import pouyabash from '@/assets/images/experience/pouyabash.jpeg';
 import sampad from '@/assets/images/experience/sampad.jpeg';
+import sportmonks from '@/assets/images/experience/sportmonks.webp';
 import tourino from '@/assets/images/experience/tourio-logo.png';
 import { Icon } from '@/components/atoms/icon';
 import { LinkButton, OutlinedLinkButton } from '@/components/atoms/link-button';
@@ -13,6 +14,7 @@ import {
   ExpItem,
   type ExperienceItemProps as ExperienceRecord,
 } from './exp-item';
+import { ExpTimeline } from './exp-timeline';
 
 const experience: Array<ExperienceRecord> = [
   {
@@ -20,6 +22,7 @@ const experience: Array<ExperienceRecord> = [
     position: 'Backend developer (Internship)',
     from: 'Oct 2025',
     link: 'https://www.sportmonks.com/',
+    image: sportmonks,
     color: '#1BB566',
   },
   {
@@ -133,15 +136,13 @@ export const Experience = ({ featured }: ExperienceProps) => {
           </LinkButton>
         )}
       </div>
-      <ol className={'flex flex-col gap-1.5'}>
-        {items.map((exp, index) => {
-          return (
-            <li key={exp.company}>
-              <ExpItem {...exp} last={index === items.length - 1} />
-            </li>
-          );
-        })}
-      </ol>
+      <ExpTimeline className={'flex flex-col gap-1.5'}>
+        {items.map((exp) => (
+          <li key={exp.company} data-exp-item>
+            <ExpItem {...exp} />
+          </li>
+        ))}
+      </ExpTimeline>
     </Section>
   );
 };
