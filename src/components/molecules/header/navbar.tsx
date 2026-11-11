@@ -28,6 +28,10 @@ const MotionNavIndicator = motion(NavIndicator);
 
 const toolbarLinksList = [
   {
+    title: 'Home',
+    href: '/',
+  },
+  {
     title: 'About',
     href: '/about',
   },
@@ -92,7 +96,10 @@ export const Navbar = (props: NavbarProps) => {
         }
       >
         {toolbarLinksList.map((link) => {
-          const isActive = props.path?.startsWith(link.href) || false;
+          const isActive =
+            link.href === '/'
+              ? props.path === '/'
+              : props.path?.startsWith(link.href) || false;
           return (
             <NavItem key={link.href}>
               <NavPageLink

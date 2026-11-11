@@ -31,32 +31,47 @@ export const Intro = () => {
               'ring-1 ring-divider ring-offset-2 ring-offset-background',
             )}
           />
-          <Link
-            title={'Sportmonks'}
-            href={'https://www.sportmonks.com/'}
-            className={cx(
-              'inline-flex items-center gap-2 self-center',
-              'px-3 py-1 rounded-full border border-divider',
-              'text-3xs font-medium text-secondary-txt no-underline',
-              'hocus:text-primary-txt hocus:bg-toolbar-highlight',
-            )}
-            data-umami-event={'Link to current company'}
-          >
-            <span className={'relative flex size-2'} aria-hidden={'true'}>
+          <div className={'flex flex-col items-start gap-2'}>
+            <Link
+              title={'Sportmonks'}
+              href={'https://www.sportmonks.com/'}
+              className={cx(
+                'inline-flex items-center gap-2',
+                'px-3 py-1 rounded-full border border-divider',
+                'text-3xs font-medium text-secondary-txt no-underline',
+                'hocus:text-primary-txt hocus:bg-toolbar-highlight',
+              )}
+              data-umami-event={'Link to current company'}
+            >
+              <span className={'relative flex size-2'} aria-hidden={'true'}>
+                <span
+                  className={cx(
+                    'absolute inline-flex size-full rounded-full bg-green-400 opacity-75',
+                    'motion-safe:animate-ping',
+                  )}
+                />
+                <span
+                  className={
+                    'relative inline-flex size-2 rounded-full bg-green-500'
+                  }
+                />
+              </span>
+              Software Engineer at Sportmonks
+            </Link>
+            <span
+              className={cx(
+                'inline-flex items-center gap-2 px-3 py-1 rounded-full',
+                'border border-divider bg-toolbar-highlight',
+                'text-3xs font-medium text-secondary-txt',
+              )}
+            >
               <span
-                className={cx(
-                  'absolute inline-flex size-full rounded-full bg-green-400 opacity-75',
-                  'motion-safe:animate-ping',
-                )}
+                className={'size-1.5 rounded-full bg-accent'}
+                aria-hidden={'true'}
               />
-              <span
-                className={
-                  'relative inline-flex size-2 rounded-full bg-green-500'
-                }
-              />
+              Open to projects &amp; opportunities
             </span>
-            Software Engineer at Sportmonks
-          </Link>
+          </div>
         </div>
 
         <h1
