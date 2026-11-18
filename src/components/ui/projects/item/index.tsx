@@ -19,7 +19,9 @@ export const ProjectItem = ({ project }: ProjectItemProps) => {
     <TiltCard tint={color}>
       <ProjectLink
         title={project.name}
-        href={project.url}
+        href={
+          project.caseStudy ? `/projects/${project.caseStudy}` : project.url
+        }
         style={{ '--tint': color } as CSSProperties}
         data-umami-event={'View project'}
         data-umami-event-project={project.name}
@@ -43,6 +45,16 @@ export const ProjectItem = ({ project }: ProjectItemProps) => {
             >
               {project.name}
             </p>
+            {project.caseStudy ? (
+              <span
+                className={cx(
+                  'shrink-0 px-2 py-0.5 rounded-full text-3xs font-medium',
+                  'text-secondary-txt bg-tint-bg',
+                )}
+              >
+                Case study
+              </span>
+            ) : null}
             {/* <StarsCounter repo={project.repo || ''} owner={project.owner} /> */}
           </div>
           <p className={'text-2xs text-secondary-txt line-clamp-2 text-pretty'}>

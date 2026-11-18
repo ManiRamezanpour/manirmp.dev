@@ -38,6 +38,7 @@ const components = {
 
 interface MdxProps {
   code?: string;
+  components?: MDXComponents;
 }
 
 const getMDXComponent = (code: string) => {
@@ -50,7 +51,7 @@ export const MDX = (props: MdxProps) => {
   const MdxComponent = getMDXComponent(props.code);
   return (
     <article className={'mdx'}>
-      <MdxComponent components={components} />
+      <MdxComponent components={{ ...components, ...props.components }} />
     </article>
   );
 };

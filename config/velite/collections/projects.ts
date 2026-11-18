@@ -19,6 +19,7 @@ export const projects = defineCollection({
         .regex(new RegExp('^#(?:[0-9a-fA-F]{3}){1,2}$'))
         .optional(),
       repo: s.string().optional(),
+      caseStudy: s.string().optional(),
       owner: s.string().optional(),
       hide: s.boolean().optional().default(false),
     })

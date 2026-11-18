@@ -35,6 +35,9 @@ export const ProjectCard = ({
     hexToRgb(project.darkColor || project.color, 1, true) ||
     'var(--color-accent-dark)';
   const iconSrc = `/media/projects/${project.icon || ''}`;
+  const href = project.caseStudy
+    ? `/projects/${project.caseStudy}`
+    : project.url;
   return (
     <TiltCard
       tint={color}
@@ -43,7 +46,7 @@ export const ProjectCard = ({
     >
       <CardLink
         title={project.name}
-        href={project.url}
+        href={href}
         className={cx(
           compact && 'gap-3 p-3 tablet-sm:p-4',
           highlighted && 'tablet-sm:flex-row tablet-sm:gap-5',
@@ -114,9 +117,18 @@ export const ProjectCard = ({
           >
             {project.description}
           </p>
-          <HostChip className={'mt-auto pt-1'}>
-            {getHostLabel(project.url)}
-          </HostChip>
+          <div className={'mt-auto pt-1 flex flex-wrap gap-1.5'}>
+            {project.caseStudy ? (
+              <HostChip className={'text-primary-txt'}>
+                <span
+                  className={'size-1.5 rounded-full bg-[rgb(var(--tint))]'}
+                  aria-hidden={'true'}
+                />
+                Case study
+              </HostChip>
+            ) : null}
+            <HostChip>{getHostLabel(project.url)}</HostChip>
+          </div>
         </div>
 
         {highlighted ? (
