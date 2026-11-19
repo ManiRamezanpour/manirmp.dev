@@ -1,0 +1,56 @@
+---
+title: ShapeFormer
+summary: Firmware and a browser controller for a University of Twente shape former — weighing, temperature-compensating and moving a stepper, all driven from a Raspberry Pi.
+icon: shapeformer-web.png
+color: '#0f766e'
+darkColor: '#2dd4bf'
+year: '2025'
+role: Firmware & full-stack
+context: University of Twente
+stack:
+  - Arduino (C++)
+  - HX711 load cell
+  - DS18B20
+  - Stepper driver
+  - Python
+  - Flask
+  - pySerial
+  - Raspberry Pi
+links:
+  - label: Firmware
+    url: https://github.com/ManiRamezanpour/shape-former
+  - label: Web controller
+    url: https://github.com/ManiRamezanpour/Shape-former-web-ui
+  - label: Live UI
+    url: https://shape-former-web-ui.vercel.app
+---
+
+## The problem
+
+The shape former is a lab rig: a stepper motor drives the forming head while a load
+cell measures the force. The goal was to run cycles from a browser instead of a
+serial monitor on a laptop wired to the Arduino — and to keep readings trustworthy
+as the rig warms up.
+
+## How it works
+
+Hit **Start cycle** below. It's a simulation of the real pipeline, using the same
+serial format, motion parameters and calibration constants as the firmware.
+
+<ShapeFormerDemo />
+
+## Decisions worth mentioning
+
+- **Two codebases, one contract.** The Arduino only understands newline-terminated
+  text commands. That kept the firmware dumb and testable from any serial monitor,
+  and let the web side evolve independently.
+- **A background serial reader.** `SerialManager` runs a reader thread that keeps the
+  last 2,500 lines in a ring buffer, and `wait_for()` blocks until a matching reply
+  arrives. Flask requests never block on a half-read line.
+- **Temperature compensation in firmware.** Strain gauges drift with heat, so a
+  DS18B20 sits next to the load cell and every reading is divided by
+  `1 + 0.0002 × (T − 25 °C)` — the calibration temperature — before it leaves the
+  board.
+- **Develop off-device.** `pyserial` is optional and the port comes from
+  `SERIAL_PORT`, so the whole UI runs on a laptop (or Vercel) without hardware,
+  then deploys unchanged to the Pi.

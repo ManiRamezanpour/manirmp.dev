@@ -7,6 +7,7 @@ import remarkUnwrapImages from 'remark-unwrap-images';
 import { defineConfig } from 'velite';
 
 import { blogs } from './config/velite/collections/blog';
+import { caseStudies } from './config/velite/collections/case-studies';
 import { extensions } from './config/velite/collections/extensions';
 import { gaming } from './config/velite/collections/gaming';
 import { hardware } from './config/velite/collections/hardware';
@@ -18,7 +19,15 @@ import unwrapFigure from './config/velite/rehype/figure';
 import { toc } from './config/velite/rehype/toc';
 
 export default defineConfig({
-  collections: { blogs, extensions, gaming, hardware, software, projects },
+  collections: {
+    blogs,
+    caseStudies,
+    extensions,
+    gaming,
+    hardware,
+    software,
+    projects,
+  },
   mdx: {
     copyLinkedFiles: false,
     remarkPlugins: [smartypants, remarkUnwrapImages, remarkSqueezeParagraphs],
